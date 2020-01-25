@@ -35,3 +35,24 @@ I still use npm and not yarn as package manager (except workspaces) because I'm 
 ## Express setup with (express-generator)[https://www.npmjs.com/package/express-generator]
 
 To generate the boilerplate code of a NodeJS Express server I used (express-generator)[https://www.npmjs.com/package/express-generator] that give a clean structure (app.js, bin/www, public, /routes). After this setup I've added cross-env (because I'm on windows) and put the port to 3033 (just to not have conflicts with other projects locally).
+
+## Test-driven development (TDD)
+
+I've a TDD approach as follow:
+
+1. Create an empty endpoint and controller. (could have been done afterwards as well)
+
+![dummy controller](2020-01-25-12-57-20.png)
+
+2. Create a tests on the controller
+
+![controller tests](doc-resources/2020-01-25-12-55-25.png)
+
+3. Run the test and let them fail as expected
+
+![Failling test](doc-resources/2020-01-25-12-53-05.png)
+
+4. Implement the feature in the controller to fix the test
+5. Run the test to check it passes. if not come back to the step 4.
+6. Refactor the code if it's useful and check all tests are still passing.
+7. Go back to step 2 to cover more use cases (happy path or errors).

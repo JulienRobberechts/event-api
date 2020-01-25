@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cross-env DEBUG=server:* PORT=3033 nodemon ./bin/www"
+    "start": "cross-env DEBUG=server:* PORT=3033 nodemon ./bin/www",
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,6 +14,7 @@
   },
   "devDependencies": {
     "cross-env": "^6.0.3",
+    "jest": "^25.1.0",
     "nodemon": "^2.0.2"
   }
 }
