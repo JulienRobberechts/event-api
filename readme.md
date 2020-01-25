@@ -56,3 +56,7 @@ I've a TDD approach as follow:
 5. Run the test to check it passes. if not come back to the step 4.
 6. Refactor the code if it's useful and check all tests are still passing.
 7. Go back to step 2 to cover more use cases (happy path or errors).
+
+## third-party-api
+
+I choose to create an other server to emulate the third party api to be able to test it close to the real use case (real Http call and not local data).
