@@ -1,7 +1,7 @@
 {
-  "name": "inato-tool",
+  "name": "inato-clinical-trial",
   "version": "1.0.0",
-  "description": "inato-clinical-trial",
+  "description": "My code for senior-take-home-test by INATO",
   "private": true,
   "scripts": {
     "start": "yarn workspace server-rest start"
