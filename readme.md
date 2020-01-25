@@ -60,3 +60,7 @@ I've a TDD approach as follow:
 ## third-party-api
 
 I choose to create an other server to emulate the third party api to be able to test it close to the real use case (real Http call and not local data). But I could have done a mock of an HTTP call.
+
+## Http calls
+
+I used Axios for http calls because it's less work and a better syntax.
