@@ -4,7 +4,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
-var trialsRouter = require("./routes/trials");
+var ongoingTrialsRouter = require("./routes/ongoingTrials");
 
 var app = express();
 
@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/trials", trialsRouter);
+app.use("/OngoingTrials", ongoingTrialsRouter);
 
 app.use(function(err, req, res, next) {
   console.error("API Error: ", err);
