@@ -1,0 +1,14 @@
+{
+  "name": "inato-tool",
+  "version": "1.0.0",
+  "description": "inato-clinical-trial",
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace server-rest start"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "Julien Robberechts",
+  "license": "MIT"
+}
