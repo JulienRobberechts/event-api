@@ -42,15 +42,15 @@ I've a TDD approach as follow:
 
 1. Create an empty endpoint and controller. (could have been done afterwards as well)
 
-![dummy controller](2020-01-25-12-57-20.png)
+![dummy controller](doc-resources/dummy-controller.png)
 
 2. Create a tests on the controller
 
-![controller tests](doc-resources/2020-01-25-12-55-25.png)
+![controller tests](doc-resources/controller-tests.png)
 
 3. Run the test and let them fail as expected
 
-![Failling test](doc-resources/2020-01-25-12-53-05.png)
+![Failing test](doc-resources/failing-test.png)
 
 4. Implement the feature in the controller to fix the test
 5. Run the test to check it passes. if not come back to the step 4.
@@ -59,4 +59,4 @@ I've a TDD approach as follow:
 
 ## third-party-api
 
-I choose to create an other server to emulate the third party api to be able to test it close to the real use case (real Http call and not local data).
+I choose to create an other server to emulate the third party api to be able to test it close to the real use case (real Http call and not local data). But I could have done a mock of an HTTP call.
