@@ -9,13 +9,13 @@ This repository contains my code for the (senior-take-home-test)[https://github.
 1. Initialize packages by running
 
 ```
-yarn
+npm i
 ```
 
 2. Start the project
 
 ```
-yarn start
+npm start
 ```
 
 ## Technical choices
@@ -29,3 +29,9 @@ I've chosen to use a monorepo because it's a clean structure to group multiple p
 - To reduce the need of configuration to manage versions (Yarn Workspaces do a lot of transparent work to optimize this)
 
 In our company (40 dev/9 teams), the experience of monorepo (more than 100 packages for each part of the site) was really positive.
+
+I still use npm and not yarn as package manager (except workspaces) because I'm more used to.
+
+## Express setup with (express-generator)[https://www.npmjs.com/package/express-generator]
+
+To generate the boilerplate code of a NodeJS Express server I used (express-generator)[https://www.npmjs.com/package/express-generator] that give a clean structure (app.js, bin/www, public, /routes). After this setup I've added cross-env (because I'm on windows) and put the port to 3033 (just to not have conflicts with other projects locally).

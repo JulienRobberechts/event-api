@@ -4,11 +4,14 @@
   "description": "My code for senior-take-home-test by INATO",
   "private": true,
   "scripts": {
-    "start": "yarn workspace server-rest start"
+    "start": "yarn workspace server start"
   },
   "workspaces": [
     "packages/*"
   ],
   "author": "Julien Robberechts",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "yarn": "^1.21.1"
+  }
 }
