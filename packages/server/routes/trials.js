@@ -6,7 +6,7 @@ const {
 
 /* GET trials listing. */
 router.get("/", async function(req, res, next) {
-  const sponsorName = ""; //
+  const sponsorName = "Sanofi"; //
   const result = await getOngoingTrialsBySponsor(sponsorName);
   res.send(result);
 });

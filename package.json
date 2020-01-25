@@ -7,7 +7,7 @@
     "start-server": "yarn workspace server start",
     "start-3p-server": "yarn workspace third-party-api start",
     "start": "concurrently --kill-others-on-fail \"npm run start-server\" \"npm run start-3p-server\"",
-    "test": "yarn workspace server test"
+    "test": "concurrently --kill-others-on-fail \"npm run start-3p-server\" \"yarn workspace server test\""
   },
   "workspaces": [
     "packages/*"

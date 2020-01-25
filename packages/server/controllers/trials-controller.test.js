@@ -19,10 +19,27 @@ const expectedOngoingTrialsForSanofi = [
   }
 ];
 
+const expectedOngoingTrialsForAstraZeneca = [
+  {
+    name: "Neratinib +/- Fulvestrant in HER2+, ER+ Metastatic Breast Cancer",
+    start_date: "2016-03-08",
+    end_date: "2026-10-10",
+    sponsor: "AstraZeneca"
+  }
+];
+
 describe("trials-controller", () => {
   it("should return ongoing trials for Sanofi", async () => {
     const result = await getOngoingTrialsBySponsor("Sanofi");
     expect(result).toEqual(expectedOngoingTrialsForSanofi);
+  });
+  it("should return ongoing trials for AstraZeneca", async () => {
+    const result = await getOngoingTrialsBySponsor("AstraZeneca");
+    expect(result).toEqual(expectedOngoingTrialsForAstraZeneca);
+  });
+  it("should return no ongoing trials for unknown lab", async () => {
+    const result = await getOngoingTrialsBySponsor("UnknownLab");
+    expect(result).toEqual([]);
   });
 });
 
