@@ -4,7 +4,9 @@
   "description": "My code for senior-take-home-test by INATO",
   "private": true,
   "scripts": {
-    "start": "yarn workspace server start"
+    "start-server": "yarn workspace server start",
+    "start-3p-server": "yarn workspace third-party-api start",
+    "start": "concurrently --kill-others-on-fail \"npm run start-server\" \"npm run start-3p-server\""
   },
   "workspaces": [
     "packages/*"
@@ -12,6 +14,7 @@
   "author": "Julien Robberechts",
   "license": "MIT",
   "dependencies": {
+    "concurrently": "^5.0.2",
     "yarn": "^1.21.1"
   }
 }

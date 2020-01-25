@@ -1,4 +1,3 @@
-const sampleTrials = require("./trials.test-data");
 var debug = require("debug")("server:api:trials");
 
 const {
