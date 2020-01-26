@@ -6,7 +6,8 @@
 
 @intatoToolRootUrl=http://localhost:3033
 
-### Get ongoing trials for a labo
-GET {{intatoToolRootUrl}}/OngoingTrials/Sanofi
+### Get ongoing trials for Sanofi
+GET {{intatoToolRootUrl}}/OngoingTrials?sponsor=Sanofi
 
-
+### Get ongoing trials in France
+GET {{intatoToolRootUrl}}/OngoingTrials?country=FR
