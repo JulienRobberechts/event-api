@@ -1,8 +1,17 @@
-var debug = require("debug")("server:api:trials");
-
+const nock = require("nock");
+const debug = require("debug")("server:api:trials");
+const allTrials = require("./trials.test-data.json");
 const {
   getOngoingTrialsBySponsor
 } = require("../controllers/trials-controller");
+const ThirdPartyApiRootUrl = "https://api.trials.thirdparty.com";
+
+const mockThirdPartyApi = () => {
+  const scope = nock(ThirdPartyApiRootUrl)
+    .defaultReplyHeaders({ "access-control-allow-origin": "*" })
+    .get("/alltrials")
+    .reply(200, allTrials);
+};
 
 const expectedOngoingTrialsForSanofi = [
   {
@@ -29,7 +38,11 @@ const expectedOngoingTrialsForAstraZeneca = [
 ];
 
 describe("trials-controller", () => {
+  beforeEach(() => {
+    mockThirdPartyApi();
+  });
   it("should return ongoing trials for Sanofi", async () => {
+    mockThirdPartyApi();
     const result = await getOngoingTrialsBySponsor("Sanofi");
     expect(result).toEqual(expectedOngoingTrialsForSanofi);
   });
