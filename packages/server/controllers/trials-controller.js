@@ -1,7 +1,7 @@
 const debug = require("debug")("server:api:trials");
 const { GetAllTrials } = require("../adapters/thirdPartyApi");
 
-async function getOngoingTrialsBySponsor(sponsorName) {
+async function getOngoingTrialsBySponsor({ sponsorName }) {
   debug(
     `trials-controller.getOngoingTrialsBySponsor called with: sponsorName=${sponsorName}`
   );
@@ -25,7 +25,8 @@ const trialIsOngoingAt = currentDate => trial =>
 
 const trialIsNotCanceled = trial => !trial.canceled;
 
-const trialIsSponsoredBy = sponsorName => trial => trial.sponsor == sponsorName;
+const trialIsSponsoredBy = sponsorName => trial =>
+  !sponsorName || trial.sponsor == sponsorName;
 
 const trialSummary = ({ name, start_date, end_date, sponsor }) => ({
   name,

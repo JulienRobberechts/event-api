@@ -14,7 +14,7 @@ router.get(
   wrapAsync(async function(req, res, next) {
     const sponsorName = req.query.sponsor;
     debug("Endpoint OngoingTrials for Sponsor ", sponsorName);
-    const result = await getOngoingTrialsBySponsor(sponsorName);
+    const result = await getOngoingTrialsBySponsor({ sponsorName });
     res.send(result);
   })
 );
