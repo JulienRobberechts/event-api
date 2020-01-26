@@ -2,6 +2,8 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const { handleAllError } = require("./utils/errors");
+const { handleValidationError } = require("./utils/errors/ValidationError");
 
 var indexRouter = require("./routes/index");
 var ongoingTrialsRouter = require("./routes/ongoingTrials");
@@ -17,9 +19,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/OngoingTrials", ongoingTrialsRouter);
 
-app.use(function(err, req, res, next) {
-  console.error("API Error: ", err);
-  res.status(500).send({ errorMessage: "Internal error in Inato API" });
-});
+app.use(handleValidationError);
+app.use(handleAllError);
 
 module.exports = app;

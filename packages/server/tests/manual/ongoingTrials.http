@@ -1,0 +1,12 @@
+
+// These request `*.http` files need to be opened in VS Code with the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension.
+
+// To execute this request, the server need up and running locally
+// AND target a valid third party API.
+
+@intatoToolRootUrl=http://localhost:3033
+
+### Get ongoing trials for a labo
+GET {{intatoToolRootUrl}}/OngoingTrials/Sanofi
+
+
