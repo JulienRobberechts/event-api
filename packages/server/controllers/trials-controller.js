@@ -1,9 +1,9 @@
 const debug = require("debug")("server:api:trials");
 const { GetAllTrials } = require("../adapters/thirdPartyApi");
 
-async function getOngoingTrialsBySponsor({ sponsorName }) {
+async function getOngoingTrialsBySponsor({ sponsorName, countryCode }) {
   debug(
-    `trials-controller.getOngoingTrialsBySponsor called with: sponsorName=${sponsorName}`
+    `trials-controller.getOngoingTrialsBySponsor called with: sponsorName=${sponsorName} countryCode=${countryCode}`
   );
   const allTrials = await GetAllTrials();
   const currentDate = Date.now();
@@ -12,6 +12,7 @@ async function getOngoingTrialsBySponsor({ sponsorName }) {
     .filter(trialIsOngoingAt(currentDate))
     .filter(trialIsNotCanceled)
     .filter(trialIsSponsoredBy(sponsorName))
+    .filter(trialIsInCountry(countryCode))
     .map(trialSummary);
 
   return ongoingTrials;
@@ -25,6 +26,9 @@ const trialIsNotCanceled = trial => !trial.canceled;
 
 const trialIsSponsoredBy = sponsorName => trial =>
   !sponsorName || trial.sponsor.toUpperCase() === sponsorName.toUpperCase();
+
+const trialIsInCountry = countryCode => trial =>
+  !countryCode || trial.country.toUpperCase() === countryCode.toUpperCase();
 
 const trialSummary = ({ name, start_date, end_date, sponsor }) => ({
   name,

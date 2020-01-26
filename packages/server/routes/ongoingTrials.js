@@ -13,8 +13,12 @@ router.get(
   "/",
   wrapAsync(async function(req, res, next) {
     const sponsorName = req.query.sponsor;
+    const countryCode = req.query.country;
     debug("Endpoint OngoingTrials for Sponsor ", sponsorName);
-    const result = await getOngoingTrialsBySponsor({ sponsorName });
+    const result = await getOngoingTrialsBySponsor({
+      sponsorName,
+      countryCode
+    });
     res.send(result);
   })
 );
