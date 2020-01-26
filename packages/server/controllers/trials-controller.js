@@ -1,11 +1,16 @@
 const debug = require("debug")("server:api:trials");
 const { GetAllTrials } = require("../adapters/thirdPartyApi");
+const SampleAllTrials = require("../tests/data/trials-all.json");
 
 async function getOngoingTrialsBySponsor(sponsorName) {
   debug(
     `trials-controller.getOngoingTrialsBySponsor called with: sponsorName=${sponsorName}`
   );
-  const allTrials = await GetAllTrials();
+
+  debug("process.env.SAMPLE_MODE =", process.env.SAMPLE_MODE);
+  const allTrials = process.env.SAMPLE_MODE
+    ? SampleAllTrials
+    : await GetAllTrials();
   const currentDate = Date.now();
 
   // debug("allTrials", allTrials);

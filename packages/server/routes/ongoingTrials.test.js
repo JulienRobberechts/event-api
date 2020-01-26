@@ -11,16 +11,24 @@ describe("GET /OngoingTrials", () => {
   beforeEach(() => {
     mockThirdPartyApi();
   });
-  it("/Sanofi", async () => {
-    const response = await api.get("/OngoingTrials/Sanofi").expect(200);
+  it("sponsor Sanofi", async () => {
+    const response = await api.get("/OngoingTrials?sponsor=Sanofi").expect(200);
     expect(response.body).toEqual(expectedOngoingTrialsForSanofi);
   });
-  it("/AstraZeneca", async () => {
-    const response = await api.get("/OngoingTrials/AstraZeneca").expect(200);
+  it("sponsor AstraZeneca", async () => {
+    const response = await api
+      .get("/OngoingTrials?sponsor=AstraZeneca")
+      .expect(200);
     expect(response.body).toEqual(expectedOngoingTrialsForAstraZeneca);
   });
-  it("/UnknownLab", async () => {
-    const response = await api.get("/OngoingTrials/UnknownLab").expect(200);
+  it("sponsor UnknownLab", async () => {
+    const response = await api
+      .get("/OngoingTrials?sponsor=UnknownLab")
+      .expect(200);
+    expect(response.body).toEqual([]);
+  });
+  it("all", async () => {
+    const response = await api.get("/OngoingTrials").expect(200);
     expect(response.body).toEqual([]);
   });
 });
