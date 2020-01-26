@@ -7,7 +7,7 @@ const ThirdPartyApiRootUrl_LOCAL = "http://localhost:4010/alltrials";
 const GetAllTrials = async () => {
   try {
     const response = await axios.get(ThirdPartyApiRootUrl + "/alltrials");
-    debug("thirdPartyApi Adapter response:");
+    // debug("thirdPartyApi Adapter response:", JSON.stringify(response));
     return response.data;
   } catch (error) {
     debug("thirdPartyApi Adapter error:", error);

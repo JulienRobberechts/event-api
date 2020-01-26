@@ -4,10 +4,8 @@
   "description": "My code for senior-take-home-test by INATO",
   "private": true,
   "scripts": {
-    "start-server": "yarn workspace server start",
-    "start-3p-server": "yarn workspace third-party-api start",
-    "start": "concurrently --kill-others-on-fail \"npm run start-server\" \"npm run start-3p-server\"",
-    "test": "concurrently --kill-others-on-fail \"npm run start-3p-server\" \"yarn workspace server test\""
+    "start": "yarn workspace server start",
+    "test": "yarn workspace server test"
   },
   "workspaces": [
     "packages/*"

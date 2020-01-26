@@ -7,7 +7,7 @@ const {
 const ThirdPartyApiRootUrl = "https://api.trials.thirdparty.com";
 
 const mockThirdPartyApi = () => {
-  const scope = nock(ThirdPartyApiRootUrl)
+  nock(ThirdPartyApiRootUrl)
     .defaultReplyHeaders({ "access-control-allow-origin": "*" })
     .get("/alltrials")
     .reply(200, allTrials);
@@ -37,12 +37,11 @@ const expectedOngoingTrialsForAstraZeneca = [
   }
 ];
 
-describe("trials-controller", () => {
+describe("trials controller and adapter", () => {
   beforeEach(() => {
     mockThirdPartyApi();
   });
   it("should return ongoing trials for Sanofi", async () => {
-    mockThirdPartyApi();
     const result = await getOngoingTrialsBySponsor("Sanofi");
     expect(result).toEqual(expectedOngoingTrialsForSanofi);
   });
