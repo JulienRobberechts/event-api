@@ -1,9 +1,9 @@
 const request = require("supertest");
 
-const app = require("../../app");
-const { mockThirdPartyApi } = require("../mock/thirdParty");
-const expectedOngoingTrialsForSanofi = require("../data/trials-ongoingFor-Sanofi.json");
-const expectedOngoingTrialsForAstraZeneca = require("../data/trials-ongoingFor-AstraZeneca.json");
+const app = require("../app");
+const { mockThirdPartyApi } = require("../tests/mock/thirdParty");
+const expectedOngoingTrialsForSanofi = require("../tests/data/trials-ongoingFor-Sanofi.json");
+const expectedOngoingTrialsForAstraZeneca = require("../tests/data/trials-ongoingFor-AstraZeneca.json");
 
 const api = request(app);
 
