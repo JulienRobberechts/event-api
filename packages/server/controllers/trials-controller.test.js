@@ -14,25 +14,26 @@ const thirdPartyApiAdapterStub = require("../adapters/thirdPartyApi");
 const expectedOngoingTrialsForSanofi = require("../tests/data/trials-ongoingFor-Sanofi.json");
 const expectedOngoingTrialsForAstraZeneca = require("../tests/data/trials-ongoingFor-AstraZeneca.json");
 const expectedOngoingTrials = require("../tests/data/trials-ongoing.json");
+const expectedOngoingTrialsInFrance = require("../tests/data/trials-ongoingInFrance.json");
 
 const allTrials = require("../tests/data/trials-all.json");
 
 describe("trials controller and adapter", () => {
   beforeEach(() => jest.clearAllMocks());
   afterEach(() => jest.clearAllMocks());
-  it("should return all trials", async () => {
+  it("should return all ongoing trials", async () => {
     thirdPartyApiAdapterStub.GetAllTrials.mockReturnValueOnce(allTrials);
     const result = await getOngoingTrialsBySponsor({});
     expect(thirdPartyApiAdapterStub.GetAllTrials).toHaveBeenCalled();
     expect(result).toEqual(expectedOngoingTrials);
   });
-  it("should return trials for Sanofi", async () => {
+  it("should return ongoing trials for Sanofi", async () => {
     thirdPartyApiAdapterStub.GetAllTrials.mockReturnValueOnce(allTrials);
     const result = await getOngoingTrialsBySponsor({ sponsorName: "Sanofi" });
     expect(thirdPartyApiAdapterStub.GetAllTrials).toHaveBeenCalled();
     expect(result).toEqual(expectedOngoingTrialsForSanofi);
   });
-  it("should return trials for AstraZeneca", async () => {
+  it("should return ongoing trials for AstraZeneca", async () => {
     thirdPartyApiAdapterStub.GetAllTrials.mockReturnValueOnce(allTrials);
     const result = await getOngoingTrialsBySponsor({
       sponsorName: "AstraZeneca"
@@ -47,6 +48,14 @@ describe("trials controller and adapter", () => {
     });
     expect(thirdPartyApiAdapterStub.GetAllTrials).toHaveBeenCalled();
     expect(result).toEqual([]);
+  });
+  it("should return ongoing trials in France", async () => {
+    thirdPartyApiAdapterStub.GetAllTrials.mockReturnValueOnce(allTrials);
+    const result = await getOngoingTrialsBySponsor({
+      countryCode: "FR"
+    });
+    expect(thirdPartyApiAdapterStub.GetAllTrials).toHaveBeenCalled();
+    expect(result).toEqual(expectedOngoingTrialsInFrance);
   });
 });
 

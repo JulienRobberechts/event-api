@@ -8,8 +8,6 @@ async function getOngoingTrialsBySponsor({ sponsorName }) {
   const allTrials = await GetAllTrials();
   const currentDate = Date.now();
 
-  // debug("allTrials", allTrials);
-
   const ongoingTrials = allTrials
     .filter(trialIsOngoingAt(currentDate))
     .filter(trialIsNotCanceled)
@@ -26,7 +24,7 @@ const trialIsOngoingAt = currentDate => trial =>
 const trialIsNotCanceled = trial => !trial.canceled;
 
 const trialIsSponsoredBy = sponsorName => trial =>
-  !sponsorName || trial.sponsor == sponsorName;
+  !sponsorName || trial.sponsor.toUpperCase() === sponsorName.toUpperCase();
 
 const trialSummary = ({ name, start_date, end_date, sponsor }) => ({
   name,

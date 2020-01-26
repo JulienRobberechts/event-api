@@ -5,6 +5,7 @@ const { mockThirdPartyApi } = require("../tests/mock/thirdParty");
 const expectedOngoingTrialsForSanofi = require("../tests/data/trials-ongoingFor-Sanofi.json");
 const expectedOngoingTrialsForAstraZeneca = require("../tests/data/trials-ongoingFor-AstraZeneca.json");
 const expectedOngoingTrials = require("../tests/data/trials-ongoing.json");
+const expectedOngoingTrialsInFrance = require("../tests/data/trials-ongoingInFrance.json");
 
 const api = request(app);
 
@@ -31,5 +32,9 @@ describe("GET /OngoingTrials", () => {
       .get("/OngoingTrials?sponsor=UnknownLab")
       .expect(200);
     expect(response.body).toEqual([]);
+  });
+  it("country france", async () => {
+    const response = await api.get("/OngoingTrials?country=FR").expect(200);
+    expect(response.body).toEqual(expectedOngoingTrialsInFrance);
   });
 });
