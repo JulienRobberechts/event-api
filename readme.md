@@ -64,3 +64,5 @@ I choose to create an other server to emulate the third party api to be able to 
 ## Http calls
 
 I used Axios for http calls because it's less work and a better syntax.
+
+## Testing strategy
