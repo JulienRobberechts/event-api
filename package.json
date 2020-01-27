@@ -4,6 +4,7 @@
   "description": "My code for senior-take-home-test by INATO",
   "private": true,
   "scripts": {
+    "cli": "yarn workspace clinato start",
     "start": "yarn workspace server start",
     "test": "yarn workspace server test"
   },

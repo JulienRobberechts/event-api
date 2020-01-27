@@ -7,7 +7,7 @@
     "clinato": "./bin/index.js"
   },
   "scripts": {
-    "start": "cross-env DEBUG=cli:* node ./bin/index.js"
+    "start": "cross-env DEBUG=nothing node ./bin/index.js"
   },
   "author": "Julien Robberechts",
   "dependencies": {

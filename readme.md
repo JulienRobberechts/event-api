@@ -2,31 +2,41 @@
 
 ## Purpose
 
-This repository contains my code for the (senior-take-home-test)[https://github.com/inato/senior-take-home-test] by INATO.
+This repository contains my code for the [senior-take-home-test](https://github.com/inato/senior-take-home-test) by INATO.
 
 ## Setup
 
-1. Initialize packages by running (at the root)
+### Initialize packages by running (at the root)
 
 ```
 npm i
 ```
 
-2. Start the project
+### Start the project
 
 ```
 npm start
 ```
 
-By default the project will run with the env var `SAMPLE_MODE` in the (server start script)[.\packages\server\package.json] in order to test the application manually. In production, this var should be disabled.
+By default the project will run with the env var `SAMPLE_MODE` in the [server start script](.\packages\server\package.json) in order to test the application manually. In production, this var should be disabled.
 
-4. Install the command line locally
+### Launch/Install the command line locally
+
+There are 2 options
+
+- You can launch the command line locally
+
+```
+npm run cli
+```
+
+- OR you can install the package globally
 
 ```
 npm i -g ./packages/clinato
 ```
 
-3. Test the server
+### Test the server
 
 - run the automatic tests (10 tests)
 
@@ -35,7 +45,7 @@ npm test
 ```
 
 - In a browser: http://localhost:3033
-- In [Rest Client Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=humao.rest-client): (sample requests)[.\packages\server\tests\manual\ongoingTrials.http]
+- With [Rest Client Extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VSCode you can use the [sample requests](.\packages\server\tests\manual\ongoingTrials.http) file.
 
 4. Test the command line
 
@@ -49,6 +59,8 @@ clinato list -c FR
 clinato list -c DE
 clinato list -c france
 ```
+
+The first one is a Question/Answer cli.
 
 ## Technical choices
 
@@ -64,9 +76,9 @@ In our company (40 dev/9 teams), the experience of monorepo (more than 100 packa
 
 I still use npm and not yarn as package manager (except workspaces) because I'm more used to.
 
-## Express setup with (express-generator)[https://www.npmjs.com/package/express-generator]
+## Express setup with express-generator
 
-To generate the boilerplate code of a NodeJS Express server I used (express-generator)[https://www.npmjs.com/package/express-generator] that give a clean structure (app.js, bin/www, public, /routes). After this setup I've added cross-env (because I'm on windows) and put the port to 3033 (just to not have conflicts with other projects locally).
+To generate the boilerplate code of a NodeJS Express server I used [express-generator](https://www.npmjs.com/package/express-generator) that give a clean structure (app.js, bin/www, public, /routes). After this setup I've added cross-env (because I'm on windows) and put the port to 3033 (just to not have conflicts with other projects locally).
 
 ## Test-driven development (TDD)
 
@@ -89,12 +101,22 @@ I've a TDD approach as follow:
 6. Refactor the code if it's useful and check all tests are still passing.
 7. Go back to step 2 to cover more use cases (happy path or errors).
 
-## third-party-api
-
-I choose to create an other server to emulate the third party api to be able to test it close to the real use case (real Http call and not local data). But I could have done a mock of an HTTP call.
-
 ## Http calls
 
-I used Axios for http calls because it's less work and a better syntax.
+I used Axios for http calls because it's less work, a better syntax and avoid some bugs.
 
 ## Testing strategy
+
+I've used different strategy for tests:
+
+### Controller tests
+
+[Tests on the controller](.\packages\server\controllers\trials-controller.test.js) check only the controller logic in isolation. The adapter to the third party api is mocked with Jest.
+
+### Route tests
+
+[Tests on the route](.\packages\server\routes\ongoingTrials.test.js) check the full endpoint (route, controller, adapter). The http calls are mocked with the library nock.
+
+### Manual tests
+
+[sample requests](.\packages\server\tests\manual\ongoingTrials.http) can help to make some smoke tests.
