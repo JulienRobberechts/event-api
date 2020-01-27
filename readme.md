@@ -20,7 +20,7 @@ npm start
 
 By default the project will run with the env var `SAMPLE_MODE` in the [server start script](.\packages\server\package.json) in order to test the application manually. In production, this var should be disabled.
 
-### Launch/Install the command line locally
+### Launch/Install the command line `clinato` locally
 
 There are 2 options
 
