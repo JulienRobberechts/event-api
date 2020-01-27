@@ -4,6 +4,8 @@
 
 This repository contains my code for the [senior-take-home-test](https://github.com/inato/senior-take-home-test) by INATO.
 
+![Inato tool](doc-resources/cover.png)
+
 ## Setup
 
 ### Initialize packages by running (at the root)
