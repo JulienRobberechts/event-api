@@ -1,3 +1,5 @@
+const list = require("./");
+
 const registerCommand = program => {
   // $ clinato list
   program
