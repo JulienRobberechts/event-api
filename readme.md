@@ -20,7 +20,13 @@ npm start
 
 By default the project will run with the env var `SAMPLE_MODE` in the (server start script)[.\packages\server\package.json] in order to test the application manually. In production, this var should be disabled.
 
-3. Test
+4. Install the command line locally
+
+```
+npm i -g ./packages/clinato
+```
+
+3. Test the server
 
 - run the automatic tests (10 tests)
 
@@ -30,6 +36,17 @@ npm test
 
 - In a browser: http://localhost:3033
 - In [Rest Client Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=humao.rest-client): (sample requests)[.\packages\server\tests\manual\ongoingTrials.http]
+
+4. Test the command line
+
+Run one of those command:
+
+```
+clinato -h
+clinato list
+clinato list -c FR
+clinato list -c DE
+```
 
 ## Technical choices
 

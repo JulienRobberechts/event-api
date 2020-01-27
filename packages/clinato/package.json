@@ -1,0 +1,11 @@
+{
+  "name": "clinato",
+  "version": "1.0.0",
+  "description": "Command line interface for INATO",
+  "main": "index.js",
+  "bin": {
+    "clinato": "./bin/index.js"
+  },
+  "author": "Julien Robberechts",
+  "dependencies": {}
+}
