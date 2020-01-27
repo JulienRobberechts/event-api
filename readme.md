@@ -135,7 +135,6 @@ The CLI can be installed globally. It runs with commander to parse the command l
 
 ## To go further
 
-The structure is obviously huge for a so small project but the goal was to show different aspects of such a project.
 We could have also:
 
 - created an API documentation with Swagger
