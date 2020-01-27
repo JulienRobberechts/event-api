@@ -1,21 +1,12 @@
 #!/usr/bin/env node
 
 const program = require("commander");
-const list = require("../lib/list");
 const qAndA = require("../lib/qa");
+const registerListCommand = require("../lib/list/command");
 
-console.log("INATO Command line");
+console.log("Inato Command line");
 
-// $ clinato list
-program
-  .command("list")
-  .alias("ls")
-  .description("List trials")
-  .option("-c, --country [value]", "country of the trial", "*")
-
-  .action(function(args) {
-    list(args);
-  });
+registerListCommand(program);
 
 if (process.argv.length === 2) {
   qAndA();
