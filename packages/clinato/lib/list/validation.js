@@ -1,5 +1,5 @@
 const colors = require("colors");
-const countries = require("../countries.json");
+const countries = require("./countries.json");
 
 const validateArgs = args => {
   const country = getCountryArg(args.country);
@@ -7,7 +7,7 @@ const validateArgs = args => {
 };
 
 const getCountryArg = country => {
-  if (!country || country === "*") return null;
+  if (!country || country === "*" || country === "All") return null;
 
   const countryByCode = countries.find(
     c => c.code.toUpperCase() === country.toUpperCase()

@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const colors = require("colors");
-const pad = require("pad");
-const countries = require("./countries.json");
+const countries = require("./list/countries.json");
 const list = require("./list");
 
 const questions = [

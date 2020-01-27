@@ -1,5 +1,9 @@
 [
   {
+    "name": "All",
+    "code": "All"
+  },
+  {
     "name": "France",
     "code": "FR"
   },

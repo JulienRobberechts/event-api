@@ -6,11 +6,16 @@
   "bin": {
     "clinato": "./bin/index.js"
   },
+  "scripts": {
+    "start": "cross-env DEBUG=cli:* node ./bin/index.js"
+  },
   "author": "Julien Robberechts",
   "dependencies": {
     "axios": "^0.19.2",
     "colors": "^1.4.0",
     "commander": "^4.1.0",
+    "cross-env": "^7.0.0",
+    "debug": "^4.1.1",
     "inquirer": "^7.0.4",
     "pad": "^3.2.0"
   }
