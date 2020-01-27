@@ -2,7 +2,7 @@
 
 const program = require("commander");
 const list = require("../lib/list");
-const listQA = require("../lib/list-qa");
+const qAndA = require("../lib/qa");
 
 console.log("INATO Command line");
 
@@ -18,8 +18,7 @@ program
   });
 
 if (process.argv.length === 2) {
-  listQA();
+  qAndA();
 }
 
-const result = program.parse(process.argv);
-// console.log("result", result);
+program.parse(process.argv);

@@ -14,8 +14,7 @@ const questions = [
 ];
 
 module.exports = function() {
-  console.log("  List of ongoing trials");
-  console.log("-----------------------");
+  console.log(colors.green(">> List of ongoing trials"));
   inquirer.prompt(questions).then(function({ country }) {
     list({ country });
   });
