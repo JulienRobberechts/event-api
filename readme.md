@@ -39,13 +39,14 @@ npm test
 
 4. Test the command line
 
-Run one of those command:
+Start the server THEN run one of those command from any directory:
 
 ```
 clinato -h
 clinato list
 clinato list -c FR
 clinato list -c DE
+clinato list -c france
 ```
 
 ## Technical choices

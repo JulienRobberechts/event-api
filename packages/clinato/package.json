@@ -7,5 +7,9 @@
     "clinato": "./bin/index.js"
   },
   "author": "Julien Robberechts",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.19.2",
+    "colors": "^1.4.0",
+    "commander": "^4.1.0"
+  }
 }
