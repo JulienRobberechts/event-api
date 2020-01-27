@@ -11,3 +11,6 @@ GET {{intatoToolRootUrl}}/OngoingTrials?sponsor=Sanofi
 
 ### Get ongoing trials in France
 GET {{intatoToolRootUrl}}/OngoingTrials?country=FR
+
+### Get all ongoing trials
+GET {{intatoToolRootUrl}}/OngoingTrials

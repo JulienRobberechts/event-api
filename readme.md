@@ -6,7 +6,7 @@ This repository contains my code for the (senior-take-home-test)[https://github.
 
 ## Setup
 
-1. Initialize packages by running
+1. Initialize packages by running (at the root)
 
 ```
 npm i
@@ -17,6 +17,19 @@ npm i
 ```
 npm start
 ```
+
+By default the project will run with the env var `SAMPLE_MODE` in the (server start script)[.\packages\server\package.json] in order to test the application manually. In production, this var should be disabled.
+
+3. Test
+
+- run the automatic tests (10 tests)
+
+```
+npm test
+```
+
+- In a browser: http://localhost:3033
+- In [Rest Client Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=humao.rest-client): (sample requests)[.\packages\server\tests\manual\ongoingTrials.http]
 
 ## Technical choices
 
