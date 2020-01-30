@@ -58,5 +58,3 @@ describe("trials controller and adapter", () => {
     expect(result).toEqual(expectedOngoingTrialsInFrance);
   });
 });
-
-module.exports = { getOngoingTrialsBySponsor };
