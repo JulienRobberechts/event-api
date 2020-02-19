@@ -9,14 +9,18 @@ Sample project for a nodeJs Api and a  (command line interface) using this api.
 ### Initialize packages by running (at the root)
 
 ```
-npm i
+yarn
 ```
+
+yarn is used to build the root and all workspaces at the same time.
 
 ### Start the project
 
 ```
 npm start
 ```
+
+PS: you can use yarn as well
 
 By default the project will run with the env var `SAMPLE_MODE` in the [server start script](.\packages\server\package.json) in order to test the application manually. In production, this var should be disabled.
 
