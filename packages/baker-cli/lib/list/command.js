@@ -1,7 +1,7 @@
-const list = require("./");
+const list = require(".");
 
 const registerCommand = program => {
-  // $ clinato list
+  // $ baker-cli list
   program
     .command("list")
     .alias("ls")

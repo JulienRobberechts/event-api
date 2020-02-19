@@ -24,7 +24,7 @@ PS: you can use yarn as well
 
 By default the project will run with the env var `SAMPLE_MODE` in the [server start script](.\packages\server\package.json) in order to test the application manually. In production, this var should be disabled.
 
-### Launch/Install the command line `clinato` locally
+### Launch/Install the command line `baker-cli` locally
 
 There are 2 options
 
@@ -37,7 +37,7 @@ npm run cli
 - OR you can install the package globally
 
 ```
-npm i -g ./packages/clinato
+npm i -g ./packages/baker-cli
 ```
 
 ### Test the server
@@ -56,12 +56,12 @@ npm test
 Start the server THEN run one of those commands from any directory:
 
 ```
-clinato
-clinato -h
-clinato list
-clinato list -c FR
-clinato list -c DE
-clinato list -c france
+baker-cli
+baker-cli -h
+baker-cli list
+baker-cli list -c FR
+baker-cli list -c DE
+baker-cli list -c france
 ```
 
 The first one is a Question/Answer cli.

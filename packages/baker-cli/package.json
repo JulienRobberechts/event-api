@@ -1,10 +1,10 @@
 {
-  "name": "clinato",
+  "name": "baker-cli",
   "version": "1.0.0",
   "description": "Command line interface for INATO",
   "main": "index.js",
   "bin": {
-    "clinato": "./bin/index.js"
+    "baker-cli": "./bin/index.js"
   },
   "scripts": {
     "start": "cross-env DEBUG=nothing node ./bin/index.js"
