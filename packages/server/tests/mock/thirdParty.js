@@ -1,5 +1,5 @@
 const nock = require("nock");
-const allTrials = require("../data/trials-all.json");
+const allTrials = require("./trials-all.json");
 const config = require("../../config/config");
 
 const mockThirdPartyApi = () => {

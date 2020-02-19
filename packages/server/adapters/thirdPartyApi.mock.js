@@ -1,4 +1,4 @@
-const SampleAllTrials = require("../tests/data/trials-all.json");
+const SampleAllTrials = require("../tests/mock/trials-all.json");
 
 const GetAllTrials = async () => {
   return SampleAllTrials;
