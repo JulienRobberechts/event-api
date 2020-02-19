@@ -121,7 +121,7 @@ I've used different strategies for tests:
 
 #### Controller tests
 
-[Tests on the controller](.\packages\server\controllers\trials-controller.test.js) check only the controller logic in isolation. The adapter to the third party api is mocked with Jest.
+[Tests on the controller](.\packages\server\controllers\trials-controller.test.js) check only the controller logic in isolation. The adapter to the third party api is injected in the constructor.
 
 #### Route tests
 
