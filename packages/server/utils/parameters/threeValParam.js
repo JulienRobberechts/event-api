@@ -1,5 +1,5 @@
 const get3ValBooleanParam = value => {
-  if (typeof value === "undefined")
+  if (typeof value === "undefined" || value === null)
     return null;
 
   if (value.toUpperCase() === 'TRUE')

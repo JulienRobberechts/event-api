@@ -22,7 +22,7 @@ describe('get3ValBooleanParam', () => {
   it('should return null for null', () => {
     expect(get3ValBooleanParam(null)).toBe(null);
   })
-  it('should return null for null', () => {
+  it('should return null for null string', () => {
     expect(get3ValBooleanParam('null')).toBe(null);
   })
   it('should return null for random string', () => {
