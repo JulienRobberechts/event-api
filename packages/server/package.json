@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "cross-env SAMPLE_MODE=true DEBUG=server:* PORT=3033 nodemon ./bin/www",
-    "test": "cross-env DEBUG=server:* jest --collectCoverage"
+    "test": "cross-env DEBUG=server:* jest --collectCoverage",
+    "test-update": "jest -u"
   },
   "dependencies": {
     "axios": "^0.19.2",

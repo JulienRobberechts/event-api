@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`trials controller and adapter should return all ongoing trials 1`] = `
+exports[`trials controller should return all trials 1`] = `
 Array [
   Object {
     "end_date": "2025-08-01",
@@ -29,7 +29,7 @@ Array [
 ]
 `;
 
-exports[`trials controller and adapter should return ongoing trials for AstraZeneca 1`] = `
+exports[`trials controller should return trials for AstraZeneca 1`] = `
 Array [
   Object {
     "end_date": "2030-12-24",
@@ -46,7 +46,7 @@ Array [
 ]
 `;
 
-exports[`trials controller and adapter should return ongoing trials for Sanofi 1`] = `
+exports[`trials controller should return trials for Sanofi 1`] = `
 Array [
   Object {
     "end_date": "2025-08-01",
@@ -63,7 +63,7 @@ Array [
 ]
 `;
 
-exports[`trials controller and adapter should return ongoing trials in France 1`] = `
+exports[`trials controller should return trials in France 1`] = `
 Array [
   Object {
     "end_date": "2025-08-01",
