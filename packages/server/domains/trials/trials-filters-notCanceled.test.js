@@ -1,5 +1,3 @@
-const moment = require('moment');
-
 const {
   trialIsNotCanceled
 } = require('./trials-filters');
