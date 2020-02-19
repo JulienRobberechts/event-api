@@ -1,6 +1,6 @@
 const moment = require('moment');
 const debug = require("debug")("server:api:trials");
-const { GetAllTrials } = require("../adapters/thirdPartyApi");
+
 const {
   trialIsOngoingFilter,
   trialIsNotCanceled,
@@ -9,21 +9,30 @@ const {
   trialToSummary
 } = require('../domains/trials/trials-filters');
 
-async function getTrials({ ongoing = null, sponsorName, countryCode }) {
-  debug(
-    `trials-controller.getTrials called with: ongoing=${ongoing} sponsorName=${sponsorName} countryCode=${countryCode}`
-  );
-  const allTrials = await GetAllTrials();
-  const currentDate = moment.utc();
+class TrialsController {
+  constructor({ apiAdapter }) {
+    if (!apiAdapter)
+      throw Error('apiAdapter is null');
 
-  const trials = allTrials
-    .filter(filterOnGoing(ongoing, currentDate))
-    .filter(trialIsNotCanceled)
-    .filter(trialIsSponsoredBy(sponsorName))
-    .filter(trialIsInCountry(countryCode))
-    .map(trialToSummary);
+    this.apiAdapter = apiAdapter;
+  }
 
-  return trials;
+  async getTrials({ ongoing = null, sponsorName, countryCode }) {
+    debug(
+      `trials-controller.getTrials called with: ongoing=${ongoing} sponsorName=${sponsorName} countryCode=${countryCode}`
+    );
+    const allTrials = await this.apiAdapter.GetAllTrials();
+    const currentDate = moment.utc();
+
+    const trials = allTrials
+      .filter(filterOnGoing(ongoing, currentDate))
+      .filter(trialIsNotCanceled)
+      .filter(trialIsSponsoredBy(sponsorName))
+      .filter(trialIsInCountry(countryCode))
+      .map(trialToSummary);
+
+    return trials;
+  }
 }
 
 const filterOnGoing = (ongoing, currentDate) => {
@@ -32,4 +41,4 @@ const filterOnGoing = (ongoing, currentDate) => {
   return trialIsOngoingFilter(ongoing, currentDate);
 }
 
-module.exports = { getTrials };
+module.exports = TrialsController;

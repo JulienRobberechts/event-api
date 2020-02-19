@@ -1,12 +1,16 @@
 var express = require("express");
 var router = express.Router();
-const {
-  getTrials
-} = require("../controllers/trials-controller");
 
 const { wrapAsync } = require("../utils/errors");
 const { get3ValBooleanParam } = require("../utils/parameters/threeValParam");
 const debug = require("debug")("server:api:trials");
+
+const apiAdapter = process.env.SAMPLE_MODE
+  ? require("../adapters/thirdPartyApi.mock")
+  : require("../adapters/thirdPartyApi");
+
+const TrialsController = require("../controllers/trials-controller");
+const trialsController = new TrialsController({ apiAdapter });
 
 /* GET trials listing. */
 router.get(
@@ -18,7 +22,7 @@ router.get(
     const sponsorName = req.query.sponsor;
     const countryCode = req.query.country;
     // debug("Endpoint trials: sponsor ", sponsorName);
-    const result = await getTrials({
+    const result = await trialsController.getTrials({
       ongoing,
       sponsorName,
       countryCode
