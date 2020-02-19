@@ -18,4 +18,8 @@ describe('trialIsInCountry', () => {
     const result = trialIsInCountry("FR")(trialFromItaly);
     expect(result).toEqual(false);
   })
+  it('should return all trials when there is no country filter', () => {
+    const result = trialIsInCountry(undefined)(trialFromItaly);
+    expect(result).toEqual(true);
+  })
 })
