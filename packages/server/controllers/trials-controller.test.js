@@ -25,13 +25,13 @@ describe("trials controller and adapter", () => {
     thirdPartyApiAdapterStub.GetAllTrials.mockReturnValueOnce(allTrials);
     const result = await getOngoingTrialsBySponsor({});
     expect(thirdPartyApiAdapterStub.GetAllTrials).toHaveBeenCalled();
-    expect(result).toEqual(expectedOngoingTrials);
+    expect(result).toMatchSnapshot();
   });
   it("should return ongoing trials for Sanofi", async () => {
     thirdPartyApiAdapterStub.GetAllTrials.mockReturnValueOnce(allTrials);
     const result = await getOngoingTrialsBySponsor({ sponsorName: "Sanofi" });
     expect(thirdPartyApiAdapterStub.GetAllTrials).toHaveBeenCalled();
-    expect(result).toEqual(expectedOngoingTrialsForSanofi);
+    expect(result).toMatchSnapshot();
   });
   it("should return ongoing trials for AstraZeneca", async () => {
     thirdPartyApiAdapterStub.GetAllTrials.mockReturnValueOnce(allTrials);
@@ -39,7 +39,7 @@ describe("trials controller and adapter", () => {
       sponsorName: "AstraZeneca"
     });
     expect(thirdPartyApiAdapterStub.GetAllTrials).toHaveBeenCalled();
-    expect(result).toEqual(expectedOngoingTrialsForAstraZeneca);
+    expect(result).toMatchSnapshot();
   });
   it("should return no trials for unknown lab", async () => {
     thirdPartyApiAdapterStub.GetAllTrials.mockReturnValueOnce(allTrials);
@@ -55,6 +55,6 @@ describe("trials controller and adapter", () => {
       countryCode: "FR"
     });
     expect(thirdPartyApiAdapterStub.GetAllTrials).toHaveBeenCalled();
-    expect(result).toEqual(expectedOngoingTrialsInFrance);
+    expect(result).toMatchSnapshot();
   });
 });

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`trials controller and adapter should return all ongoing trials 1`] = `
+Array [
+  Object {
+    "end_date": "2025-08-01",
+    "name": "Olaparib + Sapacitabine in BRCA Mutant Breast Cancer",
+    "sponsor": "Sanofi",
+    "start_date": "2019-01-01",
+  },
+  Object {
+    "end_date": "2022-09-10",
+    "name": "Topical Calcipotriene Treatment for Breast Cancer Immunoprevention",
+    "sponsor": "Sanofi",
+    "start_date": "2018-03-20",
+  },
+  Object {
+    "end_date": "2030-12-24",
+    "name": "Supine MRI in Breast Cancer Patients Receiving Neoadjuvant Therapy",
+    "sponsor": "AstraZeneca",
+    "start_date": "2022-06-15",
+  },
+  Object {
+    "end_date": "2026-10-10",
+    "name": "Neratinib +/- Fulvestrant in HER2+, ER+ Metastatic Breast Cancer",
+    "sponsor": "AstraZeneca",
+    "start_date": "2016-03-08",
+  },
+]
+`;
+
+exports[`trials controller and adapter should return ongoing trials for AstraZeneca 1`] = `
+Array [
+  Object {
+    "end_date": "2030-12-24",
+    "name": "Supine MRI in Breast Cancer Patients Receiving Neoadjuvant Therapy",
+    "sponsor": "AstraZeneca",
+    "start_date": "2022-06-15",
+  },
+  Object {
+    "end_date": "2026-10-10",
+    "name": "Neratinib +/- Fulvestrant in HER2+, ER+ Metastatic Breast Cancer",
+    "sponsor": "AstraZeneca",
+    "start_date": "2016-03-08",
+  },
+]
+`;
+
+exports[`trials controller and adapter should return ongoing trials for Sanofi 1`] = `
+Array [
+  Object {
+    "end_date": "2025-08-01",
+    "name": "Olaparib + Sapacitabine in BRCA Mutant Breast Cancer",
+    "sponsor": "Sanofi",
+    "start_date": "2019-01-01",
+  },
+  Object {
+    "end_date": "2022-09-10",
+    "name": "Topical Calcipotriene Treatment for Breast Cancer Immunoprevention",
+    "sponsor": "Sanofi",
+    "start_date": "2018-03-20",
+  },
+]
+`;
+
+exports[`trials controller and adapter should return ongoing trials in France 1`] = `
+Array [
+  Object {
+    "end_date": "2025-08-01",
+    "name": "Olaparib + Sapacitabine in BRCA Mutant Breast Cancer",
+    "sponsor": "Sanofi",
+    "start_date": "2019-01-01",
+  },
+  Object {
+    "end_date": "2022-09-10",
+    "name": "Topical Calcipotriene Treatment for Breast Cancer Immunoprevention",
+    "sponsor": "Sanofi",
+    "start_date": "2018-03-20",
+  },
+]
+`;
