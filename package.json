@@ -14,7 +14,7 @@
   "author": "Julien Robberechts",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^5.0.2",
+    "concurrently": "^5.1.0",
     "yarn": "^1.22.0"
   }
 }
