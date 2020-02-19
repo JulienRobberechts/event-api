@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GET /OngoingTrials all 1`] = `
+exports[`GET /trials all 1`] = `
 Array [
   Object {
     "end_date": "2025-08-01",
@@ -29,7 +29,7 @@ Array [
 ]
 `;
 
-exports[`GET /OngoingTrials country france 1`] = `
+exports[`GET /trials country france 1`] = `
 Array [
   Object {
     "end_date": "2025-08-01",
@@ -46,7 +46,30 @@ Array [
 ]
 `;
 
-exports[`GET /OngoingTrials sponsor AstraZeneca 1`] = `
+exports[`GET /trials ongoing trials 1`] = `
+Array [
+  Object {
+    "end_date": "2025-08-01",
+    "name": "Olaparib + Sapacitabine in BRCA Mutant Breast Cancer",
+    "sponsor": "Sanofi",
+    "start_date": "2019-01-01",
+  },
+  Object {
+    "end_date": "2022-09-10",
+    "name": "Topical Calcipotriene Treatment for Breast Cancer Immunoprevention",
+    "sponsor": "Sanofi",
+    "start_date": "2018-03-20",
+  },
+  Object {
+    "end_date": "2026-10-10",
+    "name": "Neratinib +/- Fulvestrant in HER2+, ER+ Metastatic Breast Cancer",
+    "sponsor": "AstraZeneca",
+    "start_date": "2016-03-08",
+  },
+]
+`;
+
+exports[`GET /trials ongoing trials with sponsor AstraZeneca 1`] = `
 Array [
   Object {
     "end_date": "2030-12-24",
@@ -63,7 +86,7 @@ Array [
 ]
 `;
 
-exports[`GET /OngoingTrials sponsor Sanofi 1`] = `
+exports[`GET /trials sponsor Sanofi 1`] = `
 Array [
   Object {
     "end_date": "2025-08-01",

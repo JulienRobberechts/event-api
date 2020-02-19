@@ -4,10 +4,10 @@ var debug = require("debug")("cli:api");
 
 const getOngoingTrials = ({ country }, formatTrialsList) => {
   const query = country
-    ? `${apiRoot}/OngoingTrials?country=${country}`
-    : `${apiRoot}/OngoingTrials`;
+    ? `${apiRoot}/trials?ongoing=true&country=${country}`
+    : `${apiRoot}/trials?ongoing=true`;
   debug("query:", query);
-  return axios.get(query).catch(function(error) {
+  return axios.get(query).catch(function (error) {
     console.log("Error: ", error);
   });
 };

@@ -5,32 +5,38 @@ const { mockThirdPartyApi } = require("../tests/mock/thirdParty");
 
 const api = request(app);
 
-describe("GET /OngoingTrials", () => {
+describe("GET /trials", () => {
   beforeEach(() => {
     mockThirdPartyApi();
   });
   it("all", async () => {
-    const response = await api.get("/OngoingTrials").expect(200);
+    const response = await api.get("/trials").expect(200);
     expect(response.body).toMatchSnapshot();
   });
   it("sponsor Sanofi", async () => {
-    const response = await api.get("/OngoingTrials?sponsor=Sanofi").expect(200);
+    const response = await api.get("/trials?sponsor=Sanofi").expect(200);
     expect(response.body).toMatchSnapshot();
   });
-  it("sponsor AstraZeneca", async () => {
+  it("ongoing trials", async () => {
     const response = await api
-      .get("/OngoingTrials?sponsor=AstraZeneca")
+      .get("/trials?ongoing=true")
       .expect(200);
     expect(response.body).toMatchSnapshot();
   });
-  it("sponsor UnknownLab", async () => {
+  it("ongoing trials with sponsor AstraZeneca", async () => {
     const response = await api
-      .get("/OngoingTrials?sponsor=UnknownLab")
+      .get("/trials?sponsor=AstraZeneca")
+      .expect(200);
+    expect(response.body).toMatchSnapshot();
+  });
+  it("trials with sponsor UnknownLab", async () => {
+    const response = await api
+      .get("/trials?sponsor=UnknownLab")
       .expect(200);
     expect(response.body).toEqual([]);
   });
   it("country france", async () => {
-    const response = await api.get("/OngoingTrials?country=FR").expect(200);
+    const response = await api.get("/trials?country=FR").expect(200);
     expect(response.body).toMatchSnapshot();
   });
 });

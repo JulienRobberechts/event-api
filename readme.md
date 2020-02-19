@@ -49,7 +49,7 @@ npm test
 ```
 
 - In a browser: http://localhost:3033
-- With [Rest Client Extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VSCode you can use the [sample requests](.\packages\server\tests\manual\ongoingTrials.http) file.
+- With [Rest Client Extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VSCode you can use the [sample requests](.\packages\server\tests\manual\trials.http) file.
 
 4. Test the command line
 
@@ -125,11 +125,11 @@ I've used different strategies for tests:
 
 #### Route tests
 
-[Tests on the route](.\packages\server\routes\ongoingTrials.test.js) check the full endpoint (route, controller, adapter). The http calls are mocked with the library nock.
+[Tests on the route](.\packages\server\routes\trials.test.js) check the full endpoint (route, controller, adapter). The http calls are mocked with the library nock.
 
 #### Manual tests
 
-[sample requests](.\packages\server\tests\manual\ongoingTrials.http) can be used for smoke tests.
+[sample requests](.\packages\server\tests\manual\trials.http) can be used for smoke tests.
 
 ### CLI runner
 

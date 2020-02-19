@@ -9,21 +9,21 @@ const {
   trialToSummary
 } = require('../domains/trials/trials-filters');
 
-async function getOngoingTrialsBySponsor({ ongoing = null, sponsorName, countryCode }) {
+async function getTrials({ ongoing = null, sponsorName, countryCode }) {
   debug(
-    `trials-controller.getOngoingTrialsBySponsor called with: ongoing=${ongoing} sponsorName=${sponsorName} countryCode=${countryCode}`
+    `trials-controller.getTrials called with: ongoing=${ongoing} sponsorName=${sponsorName} countryCode=${countryCode}`
   );
   const allTrials = await GetAllTrials();
   const currentDate = moment.utc();
 
-  const ongoingTrials = allTrials
+  const trials = allTrials
     .filter(filterOnGoing(ongoing, currentDate))
     .filter(trialIsNotCanceled)
     .filter(trialIsSponsoredBy(sponsorName))
     .filter(trialIsInCountry(countryCode))
     .map(trialToSummary);
 
-  return ongoingTrials;
+  return trials;
 }
 
 const filterOnGoing = (ongoing, currentDate) => {
@@ -32,4 +32,4 @@ const filterOnGoing = (ongoing, currentDate) => {
   return trialIsOngoingFilter(ongoing, currentDate);
 }
 
-module.exports = { getOngoingTrialsBySponsor };
+module.exports = { getTrials };

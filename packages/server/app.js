@@ -6,7 +6,7 @@ const { handleAllError } = require("./utils/errors");
 const { handleValidationError } = require("./utils/errors/ValidationError");
 
 var indexRouter = require("./routes/index");
-var ongoingTrialsRouter = require("./routes/ongoingTrials");
+var trialsRouter = require("./routes/trials");
 
 var app = express();
 
@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/OngoingTrials", ongoingTrialsRouter);
+app.use("/trials", trialsRouter);
 
 app.use(handleValidationError);
 app.use(handleAllError);
