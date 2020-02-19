@@ -1,3 +1,4 @@
+const moment = require('moment');
 const debug = require("debug")("server:api:trials");
 const { GetAllTrials } = require("../adapters/thirdPartyApi");
 const {
@@ -6,14 +7,14 @@ const {
   trialIsSponsoredBy,
   trialIsInCountry,
   trialToSummary
-} = require('./trials-filters');
+} = require('../domains/trials/trials-filters');
 
 async function getOngoingTrialsBySponsor({ sponsorName, countryCode }) {
   debug(
     `trials-controller.getOngoingTrialsBySponsor called with: sponsorName=${sponsorName} countryCode=${countryCode}`
   );
   const allTrials = await GetAllTrials();
-  const currentDate = Date.now();
+  const currentDate = moment.utc();
 
   const ongoingTrials = allTrials
     .filter(trialIsOngoingAt(currentDate))
