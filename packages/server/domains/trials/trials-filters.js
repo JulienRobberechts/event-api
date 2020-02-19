@@ -2,7 +2,7 @@ const moment = require('moment');
 const debug = require("debug")("server:api:trials");
 
 const trialIsOngoingAt = currentDate => {
-  if (typeof currentDate.isValid !== 'function')
+  if (!currentDate || typeof currentDate.isValid !== 'function')
     throw Error('currentDate should be a moment object');
 
   if (!currentDate.isValid())

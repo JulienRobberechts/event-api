@@ -8,7 +8,6 @@ const currentDate = moment.utc("2020-01-25");
 
 describe('trialIsOngoingAt', () => {
   it('should identify past item', () => {
-
     const pastTrial = {
       "name": "item 1",
       "start_date": "2011-06-22",
@@ -52,6 +51,11 @@ describe('trialIsOngoingAt', () => {
     };
     const result = trialIsOngoingAt(currentDate)(futureTrial);
     expect(result).toEqual(false);
+  })
+  it('should return all when the current date is null', () => {
+    const nullDate = null;
+    const badCurrentDate = () => { trialIsOngoingAt(nullDate) };
+    expect(badCurrentDate).toThrow();
   })
   it('should throw an error on non moment date', () => {
     const stdDate = Date.now();
