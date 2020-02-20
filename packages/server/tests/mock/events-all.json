@@ -1,0 +1,115 @@
+[
+  {
+    "name": "Burning Man",
+    "link": "https://burningman.org/event/preparation/faq/",
+    "country": "USA",
+    "city": "Black Rock Desert, Nevada",
+    "start_date": "2020-08-30",
+    "end_date": "2025-09-07",
+    "type": "Experience"
+  },
+  {
+    "name": "Rio Carnival",
+    "country": "BRA",
+    "city": "Rio de Janeiro",
+    "start_date": "2020-02-21",
+    "end_date": "2020-02-26",
+    "type": "Street party"
+  },
+  {
+    "name": "Ice & snow sculpture festival",
+    "country": "CHN",
+    "city": "Harbin",
+    "start_date": "2019-12-24",
+    "end_date": "2020-02-28",
+    "type": "Street art"
+  },
+  {
+    "name": "La Tomatina",
+    "country": "ESP",
+    "city": "Valencia",
+    "start_date": "2020-08-26",
+    "end_date": "2020-08-26",
+    "type": "Street party"
+  },
+  {
+    "name": "Mardi gras",
+    "country": "USA",
+    "city": "New Orleans, Louisiana",
+    "start_date": "2020-02-25",
+    "end_date": "2020-02-25",
+    "type": "Street party"
+  },
+  {
+    "name": "Dia de los muertos",
+    "country": "MEX",
+    "city": "Mexico",
+    "start_date": "2020-11-01",
+    "end_date": "2020-11-02",
+    "type": "Street party"
+  },
+  {
+    "name": "King’s day",
+    "country": "NLD",
+    "city": "Amsterdam",
+    "start_date": "2020-04-27",
+    "end_date": "2020-04-27",
+    "type": "Street party"
+  },
+  {
+    "name": "Full Moon Party",
+    "country": "THA",
+    "city": "Ko Pha Ngan",
+    "start_date": "2020-03-08",
+    "end_date": "2020-03-08",
+    "type": "Experience"
+  },
+  {
+    "name": "Womad (World Of Music, Arts & Dance)",
+    "country": "GBR",
+    "city": "Wiltshire",
+    "start_date": "2020-07-23",
+    "end_date": "2020-07-26",
+    "type": "Music"
+  },
+  {
+    "name": "World sacred spirit festival",
+    "country": "IND",
+    "city": "Jodhpur",
+    "start_date": "2020-02-13",
+    "end_date": "2020-02-16",
+    "type": "Music"
+  },
+  {
+    "name": "Ouidah international voodoo festival",
+    "country": "BEN",
+    "city": "Ouidah",
+    "start_date": "2020-01-05",
+    "end_date": "2020-01-10",
+    "type": "Religious"
+  },
+  {
+    "name": "Mevlâna festival",
+    "country": "TUR",
+    "city": "Konya",
+    "start_date": "2020-12-10",
+    "end_date": "2020-12-14",
+    "type": "Religious"
+  },
+  {
+    "name": "Semana santa",
+    "country": "ESP",
+    "city": "",
+    "start_date": "2020-04-05",
+    "end_date": "2020-04-12",
+    "type": "Religious"
+  },
+  {
+    "name": "Vesak",
+    "country": "LKA",
+    "city": "Colombo",
+    "start_date": "2020-05-07",
+    "end_date": "2020-05-07",
+    "type": "Religious"
+  }
+]

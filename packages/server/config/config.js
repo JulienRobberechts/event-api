@@ -1,5 +1,5 @@
 const config = {
-  ThirdPartyApiRootUrl: "https://api.trials.thirdparty.com"
+  ThirdPartyApiRootUrl: "https://api.events.thirdparty.com"
 };
 
 module.exports = config;

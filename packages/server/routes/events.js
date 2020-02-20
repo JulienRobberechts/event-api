@@ -3,28 +3,28 @@ var router = express.Router();
 
 const { wrapAsync } = require("../utils/errors");
 const { get3ValBooleanParam } = require("../utils/parameters/threeValParam");
-const debug = require("debug")("server:api:trials");
+const debug = require("debug")("server:api:events");
 
 const apiAdapter = process.env.SAMPLE_MODE
   ? require("../adapters/thirdPartyApi.mock")
   : require("../adapters/thirdPartyApi");
 
-const TrialsController = require("../controllers/trials-controller");
-const trialsController = new TrialsController({ apiAdapter });
+const EventsController = require("../controllers/events-controller");
+const eventsController = new EventsController({ apiAdapter });
 
-/* GET trials listing. */
+/* GET events listing. */
 router.get(
   "/",
   wrapAsync(async function (req, res, next) {
     const ongoing = get3ValBooleanParam(req.query.ongoing);
-    // debug("Endpoint trials: ongoing ", ongoing);
+    // debug("Endpoint events: ongoing ", ongoing);
 
-    const sponsorName = req.query.sponsor;
+    const type = req.query.type;
     const countryCode = req.query.country;
-    // debug("Endpoint trials: sponsor ", sponsorName);
-    const result = await trialsController.getTrials({
+    // debug("Endpoint events: type ", type);
+    const result = await eventsController.getEvents({
       ongoing,
-      sponsorName,
+      type,
       countryCode
     });
     res.send(result);

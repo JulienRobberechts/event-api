@@ -1,8 +1,8 @@
-# Inato - clinical trial tool
+# Events - demo project
 
 ## Purpose
 
-Sample project for a nodeJs Api and a  (command line interface) using this api. 
+Sample project for a nodeJs Api and a cli (command line interface) using this api. 
 
 ## Setup
 
@@ -24,7 +24,7 @@ PS: you can use yarn as well
 
 By default the project will run with the env var `SAMPLE_MODE` in the [server start script](.\packages\server\package.json) in order to test the application manually. In production, this var should be disabled.
 
-### Launch/Install the command line `baker-cli` locally
+### Launch/Install the command line `event-cli` locally
 
 There are 2 options
 
@@ -37,7 +37,7 @@ npm run cli
 - OR you can install the package globally
 
 ```
-npm i -g ./packages/baker-cli
+npm i -g ./packages/event-cli
 ```
 
 ### Test the server
@@ -49,19 +49,19 @@ npm test
 ```
 
 - In a browser: http://localhost:3033
-- With [Rest Client Extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VSCode you can use the [sample requests](.\packages\server\tests\manual\trials.http) file.
+- With [Rest Client Extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VSCode you can use the [sample requests](.\packages\server\tests\manual\events.http) file.
 
 4. Test the command line
 
 Start the server THEN run one of those commands from any directory:
 
 ```
-baker-cli
-baker-cli -h
-baker-cli list
-baker-cli list -c FR
-baker-cli list -c DE
-baker-cli list -c france
+event-cli
+event-cli -h
+event-cli list
+event-cli list -c FR
+event-cli list -c DE
+event-cli list -c france
 ```
 
 The first one is a Question/Answer cli.
@@ -121,15 +121,15 @@ I've used different strategies for tests:
 
 #### Controller tests
 
-[Tests on the controller](.\packages\server\controllers\trials-controller.test.js) check only the controller logic in isolation. The adapter to the third party api is injected in the constructor.
+[Tests on the controller](.\packages\server\controllers\events-controller.test.js) check only the controller logic in isolation. The adapter to the third party api is injected in the constructor.
 
 #### Route tests
 
-[Tests on the route](.\packages\server\routes\trials.test.js) check the full endpoint (route, controller, adapter). The http calls are mocked with the library nock.
+[Tests on the route](.\packages\server\routes\events.test.js) check the full endpoint (route, controller, adapter). The http calls are mocked with the library nock.
 
 #### Manual tests
 
-[sample requests](.\packages\server\tests\manual\trials.http) can be used for smoke tests.
+[sample requests](.\packages\server\tests\manual\events.http) can be used for smoke tests.
 
 ### CLI runner
 

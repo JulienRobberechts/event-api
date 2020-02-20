@@ -2,7 +2,7 @@ const colors = require("colors");
 
 const formatHeader = args => {
   console.log("");
-  console.log(" Trials list ");
+  console.log(" Events list ");
   // console.log("------------------");
 
   const country = colors.bold(args.country ? args.country : "All");
@@ -14,14 +14,14 @@ const formatHeader = args => {
   console.log("------------------");
 };
 
-const formatBody = trials => {
-  console.log(colors.gray(` ${trials.length} trial(s) found`));
+const formatBody = events => {
+  console.log(colors.gray(` ${events.length} event(s) found`));
   console.log("");
-  trials.forEach(trial => {
-    const name = colors.cyan(trial.name);
-    const sponsor = colors.green("(" + trial.sponsor + ")");
-    const period = colors.blue(`[${trial.start_date} / ${trial.end_date}]`);
-    console.log(` * ${name} ${sponsor} ${period}`);
+  events.forEach(event => {
+    const name = colors.cyan(event.name);
+    const type = colors.green("(" + event.type + ")");
+    const period = colors.blue(`[${event.start_date} / ${event.end_date}]`);
+    console.log(` * ${name} ${type} ${period}`);
   });
 };
 

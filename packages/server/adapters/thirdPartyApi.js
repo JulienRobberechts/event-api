@@ -1,12 +1,12 @@
 const axios = require("axios");
 const config = require("../config/config");
-var debug = require("debug")("server:api:trials");
+var debug = require("debug")("server:api:events");
 const { ConnectivityError } = require("../utils/errors/ConnectivityError");
 
-const GetAllTrials = async () => {
+const GetAllEvents = async () => {
   try {
     const response = await axios.get(
-      config.ThirdPartyApiRootUrl + "/alltrials"
+      config.ThirdPartyApiRootUrl + "/allevents"
     );
     // debug("thirdPartyApi Adapter response:", JSON.stringify(response));
     return response.data;
@@ -19,4 +19,4 @@ const GetAllTrials = async () => {
   }
 };
 
-module.exports = { GetAllTrials };
+module.exports = { GetAllEvents };

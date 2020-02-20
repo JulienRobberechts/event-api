@@ -1,11 +1,13 @@
-const { getOngoingTrials } = require("../adapters/inato-api");
+const { getEvents } = require("../adapters/event-api");
 const validateArgs = require("./validation");
 const { formatHeader, formatBody } = require("./formating");
+var debug = require("debug")("cli:list");
 
 const list = rawArgs => {
+  debug('rawArgs', rawArgs);
   const validArgs = validateArgs(rawArgs);
   formatHeader(validArgs);
-  getOngoingTrials(validArgs).then(response => {
+  getEvents(validArgs).then(response => {
     formatBody(response.data);
   });
 };

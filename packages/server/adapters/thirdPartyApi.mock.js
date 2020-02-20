@@ -1,7 +1,7 @@
-const SampleAllTrials = require("../tests/mock/trials-all.json");
+const SampleAllEvents = require("../tests/mock/events-all.json");
 
-const GetAllTrials = async () => {
-  return SampleAllTrials;
+const GetAllEvents = async () => {
+  return SampleAllEvents;
 };
 
-module.exports = { GetAllTrials };
+module.exports = { GetAllEvents };

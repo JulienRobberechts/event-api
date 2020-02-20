@@ -1,10 +1,10 @@
 {
-  "name": "inato-clinical-trial",
+  "name": "event-api",
   "version": "1.0.0",
-  "description": "My code for senior-take-home-test by INATO",
+  "description": "a small demo api to query events",
   "private": true,
   "scripts": {
-    "cli": "yarn workspace baker-cli start",
+    "cli": "yarn workspace event-cli start",
     "start": "yarn workspace server start",
     "test": "yarn workspace server test"
   },

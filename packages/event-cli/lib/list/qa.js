@@ -12,9 +12,9 @@ const questions = [
   }
 ];
 
-module.exports = function() {
-  console.log(colors.green(">> List of ongoing trials"));
-  inquirer.prompt(questions).then(function({ country }) {
+module.exports = function () {
+  console.log(colors.green(">> List of events"));
+  inquirer.prompt(questions).then(function ({ country }) {
     list({ country });
   });
 };

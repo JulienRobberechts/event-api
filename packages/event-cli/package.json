@@ -1,13 +1,13 @@
 {
-  "name": "baker-cli",
+  "name": "event-cli",
   "version": "1.0.0",
-  "description": "Command line interface for INATO",
+  "description": "Command line interface for the event api",
   "main": "index.js",
   "bin": {
-    "baker-cli": "./bin/index.js"
+    "event-cli": "./bin/index.js"
   },
   "scripts": {
-    "start": "cross-env DEBUG=nothing node ./bin/index.js"
+    "start": "cross-env DEBUG=cli:* node ./bin/index.js"
   },
   "author": "Julien Robberechts",
   "dependencies": {

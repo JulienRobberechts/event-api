@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`events controller should return all events 1`] = `
+Array [
+  Object {
+    "end_date": "2025-09-07",
+    "name": "Burning Man",
+    "start_date": "2020-08-30",
+    "type": "Experience",
+  },
+  Object {
+    "end_date": "2020-02-26",
+    "name": "Rio Carnival",
+    "start_date": "2020-02-21",
+    "type": "Street party",
+  },
+  Object {
+    "end_date": "2020-02-28",
+    "name": "HARBIN INTERNATIONAL ICE & SNOW SCULPTURE FESTIVAL",
+    "start_date": "2019-12-24",
+    "type": "Street art",
+  },
+  Object {
+    "end_date": "2020-08-26",
+    "name": "La Tomatina",
+    "start_date": "2020-08-26",
+    "type": "Street party",
+  },
+  Object {
+    "end_date": "2020-02-25",
+    "name": "Mardi gras",
+    "start_date": "2020-02-25",
+    "type": "Street party",
+  },
+  Object {
+    "end_date": "2020-11-02",
+    "name": "DIA DE LOS MUERTOS",
+    "start_date": "2020-11-01",
+    "type": "Street party",
+  },
+  Object {
+    "end_date": "2020-04-27",
+    "name": "KING’S DAY",
+    "start_date": "2020-04-27",
+    "type": "Street party",
+  },
+  Object {
+    "end_date": "2020-03-08",
+    "name": "Full Moon Party",
+    "start_date": "2020-03-08",
+    "type": "Experience",
+  },
+  Object {
+    "end_date": "2020-07-26",
+    "name": "WOMAD (World Of Music, Arts & Dance)",
+    "start_date": "2020-07-23",
+    "type": "Music",
+  },
+  Object {
+    "end_date": "2020-02-16",
+    "name": "WORLD SACRED SPIRIT FESTIVAL",
+    "start_date": "2020-02-13",
+    "type": "Music",
+  },
+  Object {
+    "end_date": "2020-01-10",
+    "name": "OUIDAH INTERNATIONAL VOODOO FESTIVAL ",
+    "start_date": "2020-01-05",
+    "type": "Religious",
+  },
+  Object {
+    "end_date": "2020-12-14",
+    "name": "MEVLÂNA FESTIVAL",
+    "start_date": "2020-12-10",
+    "type": "Religious",
+  },
+  Object {
+    "end_date": "2020-04-12",
+    "name": "SEMANA SANTA",
+    "start_date": "2020-04-05",
+    "type": "Religious",
+  },
+  Object {
+    "end_date": "2020-05-07",
+    "name": "VESAK",
+    "start_date": "2020-05-07",
+    "type": "Religious",
+  },
+]
+`;
+
+exports[`events controller should return events in the US 1`] = `
+Array [
+  Object {
+    "end_date": "2025-09-07",
+    "name": "Burning Man",
+    "start_date": "2020-08-30",
+    "type": "Experience",
+  },
+  Object {
+    "end_date": "2020-02-25",
+    "name": "Mardi gras",
+    "start_date": "2020-02-25",
+    "type": "Street party",
+  },
+]
+`;
+
+exports[`events controller should return events of type Experience 1`] = `
+Array [
+  Object {
+    "end_date": "2025-09-07",
+    "name": "Burning Man",
+    "start_date": "2020-08-30",
+    "type": "Experience",
+  },
+  Object {
+    "end_date": "2020-03-08",
+    "name": "Full Moon Party",
+    "start_date": "2020-03-08",
+    "type": "Experience",
+  },
+]
+`;
+
+exports[`events controller should return events of type Music 1`] = `
+Array [
+  Object {
+    "end_date": "2020-07-26",
+    "name": "WOMAD (World Of Music, Arts & Dance)",
+    "start_date": "2020-07-23",
+    "type": "Music",
+  },
+  Object {
+    "end_date": "2020-02-16",
+    "name": "WORLD SACRED SPIRIT FESTIVAL",
+    "start_date": "2020-02-13",
+    "type": "Music",
+  },
+]
+`;

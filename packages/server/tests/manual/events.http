@@ -1,0 +1,19 @@
+
+// These request `*.http` files need to be opened in VS Code with the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension.
+
+// To execute this request, the server need up and running locally
+// AND target a valid third party API.
+
+@eventRootUrl=http://localhost:3033
+
+### Get all events
+GET {{eventRootUrl}}/events
+
+### Get all ongoing events
+GET {{eventRootUrl}}/events?ongoing=true
+
+### Get events of type Experience
+GET {{eventRootUrl}}/events?ongoing=true&type=Experience
+
+### Get events in France
+GET {{eventRootUrl}}/events?country=FR

@@ -4,7 +4,7 @@ const program = require("commander");
 const qAndA = require("../lib/qa");
 const registerListCommand = require("../lib/list/command");
 
-console.log("Inato Command line");
+console.log("Event Command line");
 
 registerListCommand(program);
 

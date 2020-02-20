@@ -1,14 +1,14 @@
 const list = require(".");
 
 const registerCommand = program => {
-  // $ baker-cli list
+  // $ event-cli list
   program
     .command("list")
     .alias("ls")
-    .description("List trials")
-    .option("-c, --country [value]", "country of the trial", "*")
+    .description("List events")
+    .option("-c, --country [value]", "country of the event", "*")
 
-    .action(function(args) {
+    .action(function (args) {
       list(args);
     });
 };

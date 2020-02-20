@@ -1,12 +1,12 @@
 const nock = require("nock");
-const allTrials = require("./trials-all.json");
+const allEvents = require("./events-all.json");
 const config = require("../../config/config");
 
 const mockThirdPartyApi = () => {
   nock(config.ThirdPartyApiRootUrl)
     .defaultReplyHeaders({ "access-control-allow-origin": "*" })
-    .get("/alltrials")
-    .reply(200, allTrials);
+    .get("/allevents")
+    .reply(200, allEvents);
 };
 
 module.exports = { mockThirdPartyApi };
