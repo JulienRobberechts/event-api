@@ -22,7 +22,7 @@ npm start
 
 PS: you can use yarn as well
 
-By default the project will run with the env var `SAMPLE_MODE` in the [server start script](.\packages\server\package.json) in order to test the application manually. In production, this var should be disabled.
+By default the project will run with the env var `SAMPLE_MODE` in the [server start script](./packages/server/package.json) in order to test the application manually. In production, this var should be disabled.
 
 ### Launch/Install the command line `event-cli` locally
 
@@ -42,16 +42,16 @@ npm i -g ./packages/event-cli
 
 ### Test the server
 
-- run the automatic tests (10 tests)
+- run the automatic tests
 
 ```
 npm test
 ```
 
 - In a browser: http://localhost:3033
-- With [Rest Client Extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VSCode you can use the [sample requests](.\packages\server\tests\manual\events.http) file.
+- With [Rest Client Extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VSCode you can use the [sample requests](./packages/server/tests/manual/events.http) file.
 
-4. Test the command line
+1. Test the command line
 
 Start the server THEN run one of those commands from any directory:
 
@@ -59,9 +59,9 @@ Start the server THEN run one of those commands from any directory:
 event-cli
 event-cli -h
 event-cli list
-event-cli list -c FR
-event-cli list -c DE
-event-cli list -c france
+event-cli list -c USA
+event-cli list -c ESP
+event-cli list -c spain
 ```
 
 The first one is a Question/Answer cli.
@@ -74,11 +74,9 @@ I've chosen to use a monorepo because it's a clean structure grouping multiple p
 
 - To get a consistent view of all projects (for better code navigation, refactoring, local tests experience).
 - To be able to make an atomic change on multiple packages.
-- To reduce the need of configuration to manage versions (Yarn Workspaces do a lot of transparent work to optimize this)
+- To reduce the need of configuration to manage versions (Yarn Workspaces do a lot of work to optimize this)
 
 In our company (40 dev/9 teams), the experience of monorepo (more than 100 packages for each part of the site) was really positive.
-
-I still use npm and not yarn as package manager (except workspaces) because I'm more used to it.
 
 ### Express setup with express-generator
 
@@ -89,17 +87,8 @@ To generate the boilerplate code of a NodeJS Express server I used [express-gene
 I've used the following tdd approach:
 
 1. Create an empty endpoint and controller. (could have been done afterwards as well)
-
-![dummy controller](doc-resources/dummy-controller.png)
-
 2. Create a test on the controller
-
-![controller tests](doc-resources/controller-tests.png)
-
 3. Run the test and let it fail as expected
-
-![Failing test](doc-resources/failing-test.png)
-
 4. Implement the feature in the controller to fix the test.
 5. Run the test to check it passes. if not come back to the step 4.
 6. Refactor the code if it's useful and check all tests are still passing.
@@ -117,19 +106,19 @@ Customs errors (like ConnectivityError) helps to carry some specific edge cases.
 
 ### Testing strategy
 
-I've used different strategies for tests:
+I've used different strategies for tests.
 
 #### Controller tests
 
-[Tests on the controller](.\packages\server\controllers\events-controller.test.js) check only the controller logic in isolation. The adapter to the third party api is injected in the constructor.
+[Tests on the controller](./packages/server/controllers/events-controller.test.js) check only the controller logic in isolation. The adapter to the third party api is injected in the constructor.
 
 #### Route tests
 
-[Tests on the route](.\packages\server\routes\events.test.js) check the full endpoint (route, controller, adapter). The http calls are mocked with the library nock.
+[Tests on the route](./packages/server/routes/events.test.js) check the full endpoint (route, controller, adapter). The http calls are mocked with the library nock.
 
 #### Manual tests
 
-[sample requests](.\packages\server\tests\manual\events.http) can be used for smoke tests.
+[sample requests](./packages/server/tests/manual/events.http) can be used for smoke tests.
 
 ### CLI runner
 
