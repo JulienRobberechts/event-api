@@ -1,8 +1,13 @@
-# Events - demo project
+# Top festivals in the world - Events API - demo project
 
 ## Purpose
 
-Sample project for a nodeJs Api and a cli (command line interface) using this api. 
+This is a sample project for a nodeJs Api and a cli (command line interface) using this api.
+It serves a selection of top festivals in the world.
+
+![Festival burning man](./doc-resources/festival-burning-man.jpg)
+
+Festival burning man
 
 ## Setup
 
@@ -133,5 +138,7 @@ We could have also:
 - developed a GraphQL server instead or on top of the REST API
 - improved code coverage
 - created unit tests in the cli
+
+![Festival burning man](./doc-resources/festival-burning-man-2.jpg)
 
 ## Thank you!
