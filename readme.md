@@ -71,6 +71,10 @@ event-cli list -c spain
 
 The first one is a Question/Answer cli.
 
+![harbin international ice and snow festival](./doc-resources/harbin.jpg)
+
+harbin international ice and snow festival
+
 ## Technical choices
 
 ### Monorepo with Yarn Workspaces
