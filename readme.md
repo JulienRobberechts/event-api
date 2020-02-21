@@ -133,6 +133,10 @@ I've used different strategies for tests.
 
 The CLI can be installed globally. It runs with commander to parse the command line and inquirer to give a nice interactive UI.
 
+### Continuous integration
+
+To run the test on each push I've setup the Github action 'Node.js CI'. It's a lightweight solution compared to Teamcity (but much less powerful).
+
 ## To go further
 
 We could have also:
