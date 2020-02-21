@@ -5,7 +5,7 @@
 This is a demo project serving a selection of top festivals in the world.
 
 ![Festival burning man](./doc-resources/festival-burning-man.jpg)  
-Festival burning man
+Festival burning man (Nevada, United States)
 
 ### Requirements
 
@@ -86,7 +86,7 @@ event-cli list -c spain
 The first one is a Question/Answer cli.
 
 ![harbin international ice and snow festival](./doc-resources/harbin.jpg)  
-Harbin international ice and snow festival (China)
+Harbin International Ice and Snow Sculpture Festival (Heilongjiang, China)
 
 ## Technical choices
 
