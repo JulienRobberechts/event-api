@@ -4,8 +4,7 @@
 
 This is a demo project serving a selection of top festivals in the world.
 
-![Festival burning man](./doc-resources/festival-burning-man.jpg)
-
+![Festival burning man](./doc-resources/festival-burning-man.jpg)  
 Festival burning man
 
 ### Requirements
@@ -86,9 +85,8 @@ event-cli list -c spain
 
 The first one is a Question/Answer cli.
 
-![harbin international ice and snow festival](./doc-resources/harbin.jpg)
-
-harbin international ice and snow festival
+![harbin international ice and snow festival](./doc-resources/harbin.jpg)  
+Harbin international ice and snow festival (China)
 
 ## Technical choices
 
@@ -162,6 +160,6 @@ We could have also:
 - improved code coverage
 - created unit tests in the cli
 
-![Festival burning man](./doc-resources/festival-burning-man-2.jpg)
-
 ## Thank you!
+
+![Festival burning man](./doc-resources/festival-burning-man-2.jpg)
