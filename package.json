@@ -6,7 +6,8 @@
   "scripts": {
     "cli": "yarn workspace event-cli start",
     "start": "yarn workspace server start",
-    "test": "yarn workspace server test"
+    "test": "yarn workspace server test",
+    "test-update": "yarn workspace server test-update"
   },
   "workspaces": [
     "packages/*"

@@ -2,14 +2,27 @@
 
 ## Purpose
 
-This is a sample project for a nodeJs Api and a cli (command line interface) using this api.
-It serves a selection of top festivals in the world.
+This is a demo project serving a selection of top festivals in the world.
 
 ![Festival burning man](./doc-resources/festival-burning-man.jpg)
 
 Festival burning man
 
-## Setup
+### Requirements
+
+Let's say that we already have access to a external API named OpenEventApi (represented by this [file](./packages/server/tests/mock/events-all.json), this API does not exist for real). We want to build a wrapper API around this third-party API in order to control the access and add filtering and data transformation features.
+
+1. From the API, we want to be able to query a list of events
+  - filtered them by country, type and ongoing events.
+  - limited the content to a subset of fields: name, start_date, end_date, type, country.
+
+2. To give access to experiences users to this API, we want to create a command-line interface.
+
+### Stack
+
+The project use the stack: REST endpoint with Node/Express for the API and the CLI.
+
+## Setup the project
 
 ### Initialize packages by running (at the root)
 
@@ -30,6 +43,8 @@ PS: you can use yarn as well
 By default the project will run with the env var `SAMPLE_MODE` in the [server start script](./packages/server/package.json) in order to test the application manually. In production, this var should be disabled.
 
 ### Launch/Install the command line `event-cli` locally
+
+Once you have started the server locally, you can run the CLI in an other shell.
 
 There are 2 options
 
@@ -119,7 +134,7 @@ I've used different strategies for tests.
 
 #### Controller tests
 
-[Tests on the controller](./packages/server/controllers/events-controller.test.js) check only the controller logic in isolation. The adapter to the third party api is injected in the constructor.
+[Tests on the controller](./packages/server/controllers/events-controller.test.js) check only the controller logic in isolation. The adapter to the OpenEventApi is injected in the constructor.
 
 #### Route tests
 

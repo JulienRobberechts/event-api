@@ -1,13 +1,13 @@
 const request = require("supertest");
 
 const app = require("../app");
-const { mockThirdPartyApi } = require("../tests/mock/thirdParty");
+const { mockOpenEventApi } = require("../tests/mock/openEventApi");
 
 const api = request(app);
 
 describe("GET /events", () => {
   beforeEach(() => {
-    mockThirdPartyApi();
+    mockOpenEventApi();
   });
   it("all", async () => {
     const response = await api.get("/events").expect(200);

@@ -1,5 +1,5 @@
 const EventsController = require("./events-controller");
-const apiAdapter = require("../adapters/thirdPartyApi.mock");
+const apiAdapter = require("../adapters/openEventApi.mock");
 const eventsController = new EventsController({ apiAdapter });
 
 describe("events controller", () => {

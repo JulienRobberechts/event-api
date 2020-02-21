@@ -6,8 +6,8 @@ const { get3ValBooleanParam } = require("../utils/parameters/threeValParam");
 const debug = require("debug")("server:api:events");
 
 const apiAdapter = process.env.SAMPLE_MODE
-  ? require("../adapters/thirdPartyApi.mock")
-  : require("../adapters/thirdPartyApi");
+  ? require("../adapters/openEventApi.mock")
+  : require("../adapters/openEventApi");
 
 const EventsController = require("../controllers/events-controller");
 const eventsController = new EventsController({ apiAdapter });

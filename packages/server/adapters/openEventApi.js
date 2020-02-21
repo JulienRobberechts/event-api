@@ -6,14 +6,13 @@ const { ConnectivityError } = require("../utils/errors/ConnectivityError");
 const GetAllEvents = async () => {
   try {
     const response = await axios.get(
-      config.ThirdPartyApiRootUrl + "/allevents"
+      config.OpenEventApiRootUrl + "/allevents"
     );
-    // debug("thirdPartyApi Adapter response:", JSON.stringify(response));
+    // debug("OpenEventApi Adapter response:", JSON.stringify(response));
     return response.data;
   } catch (error) {
-    // debug("thirdPartyApi Adapter error:", error);
     throw new ConnectivityError(
-      "Connectivity Error with the Third Party Api",
+      "Connectivity Error with the OpenEvent Api",
       error
     );
   }
