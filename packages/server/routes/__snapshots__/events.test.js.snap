@@ -16,7 +16,7 @@ Array [
   },
   Object {
     "end_date": "2020-02-28",
-    "name": "HARBIN INTERNATIONAL ICE & SNOW SCULPTURE FESTIVAL",
+    "name": "Ice & snow sculpture festival",
     "start_date": "2019-12-24",
     "type": "Street art",
   },
@@ -34,13 +34,13 @@ Array [
   },
   Object {
     "end_date": "2020-11-02",
-    "name": "DIA DE LOS MUERTOS",
+    "name": "Dia de los muertos",
     "start_date": "2020-11-01",
     "type": "Street party",
   },
   Object {
     "end_date": "2020-04-27",
-    "name": "KING’S DAY",
+    "name": "King’s day",
     "start_date": "2020-04-27",
     "type": "Street party",
   },
@@ -52,50 +52,71 @@ Array [
   },
   Object {
     "end_date": "2020-07-26",
-    "name": "WOMAD (World Of Music, Arts & Dance)",
+    "name": "Womad (World Of Music, Arts & Dance)",
     "start_date": "2020-07-23",
     "type": "Music",
   },
   Object {
     "end_date": "2020-02-16",
-    "name": "WORLD SACRED SPIRIT FESTIVAL",
+    "name": "World sacred spirit festival",
     "start_date": "2020-02-13",
     "type": "Music",
   },
   Object {
     "end_date": "2020-01-10",
-    "name": "OUIDAH INTERNATIONAL VOODOO FESTIVAL ",
+    "name": "Ouidah international voodoo festival",
     "start_date": "2020-01-05",
     "type": "Religious",
   },
   Object {
     "end_date": "2020-12-14",
-    "name": "MEVLÂNA FESTIVAL",
+    "name": "Mevlâna festival",
     "start_date": "2020-12-10",
     "type": "Religious",
   },
   Object {
     "end_date": "2020-04-12",
-    "name": "SEMANA SANTA",
+    "name": "Semana santa",
     "start_date": "2020-04-05",
     "type": "Religious",
   },
   Object {
     "end_date": "2020-05-07",
-    "name": "VESAK",
+    "name": "Vesak",
     "start_date": "2020-05-07",
     "type": "Religious",
   },
 ]
 `;
 
-exports[`GET /events country france 1`] = `Array []`;
+exports[`GET /events country spain 1`] = `
+Array [
+  Object {
+    "end_date": "2020-08-26",
+    "name": "La Tomatina",
+    "start_date": "2020-08-26",
+    "type": "Street party",
+  },
+  Object {
+    "end_date": "2020-04-12",
+    "name": "Semana santa",
+    "start_date": "2020-04-05",
+    "type": "Religious",
+  },
+]
+`;
 
 exports[`GET /events ongoing events 1`] = `
 Array [
   Object {
+    "end_date": "2020-02-26",
+    "name": "Rio Carnival",
+    "start_date": "2020-02-21",
+    "type": "Street party",
+  },
+  Object {
     "end_date": "2020-02-28",
-    "name": "HARBIN INTERNATIONAL ICE & SNOW SCULPTURE FESTIVAL",
+    "name": "Ice & snow sculpture festival",
     "start_date": "2019-12-24",
     "type": "Street art",
   },
@@ -123,13 +144,13 @@ exports[`GET /events type Music 1`] = `
 Array [
   Object {
     "end_date": "2020-07-26",
-    "name": "WOMAD (World Of Music, Arts & Dance)",
+    "name": "Womad (World Of Music, Arts & Dance)",
     "start_date": "2020-07-23",
     "type": "Music",
   },
   Object {
     "end_date": "2020-02-16",
-    "name": "WORLD SACRED SPIRIT FESTIVAL",
+    "name": "World sacred spirit festival",
     "start_date": "2020-02-13",
     "type": "Music",
   },

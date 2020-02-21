@@ -35,8 +35,8 @@ describe("GET /events", () => {
       .expect(200);
     expect(response.body).toEqual([]);
   });
-  it("country france", async () => {
-    const response = await api.get("/events?country=FR").expect(200);
+  it("country spain", async () => {
+    const response = await api.get("/events?country=ESP").expect(200);
     expect(response.body).toMatchSnapshot();
   });
 });
