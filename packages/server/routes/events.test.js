@@ -19,23 +19,19 @@ describe("GET /events", () => {
   });
   it("ongoing events", async () => {
     const response = await api
-      .get("/events?ongoing=true")
+      .get("/events?ongoing=true&date=2020-02-21")
       .expect(200);
     expect(response.body).toMatchSnapshot();
   });
-  it("ongoing events of type Experience", async () => {
-    const response = await api
-      .get("/events?type=Experience")
-      .expect(200);
+  it("events of type Experience", async () => {
+    const response = await api.get("/events?type=Experience").expect(200);
     expect(response.body).toMatchSnapshot();
   });
   it("events with type Unknown", async () => {
-    const response = await api
-      .get("/events?type=Unknown")
-      .expect(200);
+    const response = await api.get("/events?type=Unknown").expect(200);
     expect(response.body).toEqual([]);
   });
-  it("country spain", async () => {
+  it("events in country spain", async () => {
     const response = await api.get("/events?country=ESP").expect(200);
     expect(response.body).toMatchSnapshot();
   });

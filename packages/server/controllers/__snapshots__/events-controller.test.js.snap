@@ -3,7 +3,7 @@
 exports[`events controller should return all events 1`] = `
 Array [
   Object {
-    "end_date": "2025-09-07",
+    "end_date": "2020-09-07",
     "name": "Burning Man",
     "start_date": "2020-08-30",
     "type": "Experience",
@@ -92,7 +92,7 @@ Array [
 exports[`events controller should return events in the US 1`] = `
 Array [
   Object {
-    "end_date": "2025-09-07",
+    "end_date": "2020-09-07",
     "name": "Burning Man",
     "start_date": "2020-08-30",
     "type": "Experience",
@@ -109,7 +109,7 @@ Array [
 exports[`events controller should return events of type Experience 1`] = `
 Array [
   Object {
-    "end_date": "2025-09-07",
+    "end_date": "2020-09-07",
     "name": "Burning Man",
     "start_date": "2020-08-30",
     "type": "Experience",

@@ -3,7 +3,7 @@
 exports[`GET /events all 1`] = `
 Array [
   Object {
-    "end_date": "2025-09-07",
+    "end_date": "2020-09-07",
     "name": "Burning Man",
     "start_date": "2020-08-30",
     "type": "Experience",
@@ -89,7 +89,7 @@ Array [
 ]
 `;
 
-exports[`GET /events country spain 1`] = `
+exports[`GET /events events in country spain 1`] = `
 Array [
   Object {
     "end_date": "2020-08-26",
@@ -106,27 +106,10 @@ Array [
 ]
 `;
 
-exports[`GET /events ongoing events 1`] = `
+exports[`GET /events events of type Experience 1`] = `
 Array [
   Object {
-    "end_date": "2020-02-26",
-    "name": "Rio Carnival",
-    "start_date": "2020-02-21",
-    "type": "Street party",
-  },
-  Object {
-    "end_date": "2020-02-28",
-    "name": "Ice & snow sculpture festival",
-    "start_date": "2019-12-24",
-    "type": "Street art",
-  },
-]
-`;
-
-exports[`GET /events ongoing events of type Experience 1`] = `
-Array [
-  Object {
-    "end_date": "2025-09-07",
+    "end_date": "2020-09-07",
     "name": "Burning Man",
     "start_date": "2020-08-30",
     "type": "Experience",
@@ -136,6 +119,17 @@ Array [
     "name": "Full Moon Party",
     "start_date": "2020-03-08",
     "type": "Experience",
+  },
+]
+`;
+
+exports[`GET /events ongoing events 1`] = `
+Array [
+  Object {
+    "end_date": "2020-02-28",
+    "name": "Ice & snow sculpture festival",
+    "start_date": "2019-12-24",
+    "type": "Street art",
   },
 ]
 `;

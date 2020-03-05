@@ -15,17 +15,19 @@ const eventsController = new EventsController({ apiAdapter });
 /* GET events listing. */
 router.get(
   "/",
-  wrapAsync(async function (req, res, next) {
+  wrapAsync(async function(req, res, next) {
     const ongoing = get3ValBooleanParam(req.query.ongoing);
     // debug("Endpoint events: ongoing ", ongoing);
 
     const type = req.query.type;
     const countryCode = req.query.country;
+    const date = req.query.date;
     // debug("Endpoint events: type ", type);
     const result = await eventsController.getEvents({
       ongoing,
       type,
-      countryCode
+      countryCode,
+      date
     });
     res.send(result);
   })
