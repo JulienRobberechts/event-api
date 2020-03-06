@@ -21,7 +21,7 @@ class EventsController {
     );
     const allEvents = await this.apiAdapter.GetAllEvents();
 
-    const dateInQuery = moment(date);
+    const dateInQuery = moment.utc(date);
     const currentDate = dateInQuery.isValid() ? dateInQuery : moment.utc();
 
     const events = allEvents

@@ -126,6 +126,12 @@ Array [
 exports[`GET /events ongoing events 1`] = `
 Array [
   Object {
+    "end_date": "2020-02-26",
+    "name": "Rio Carnival",
+    "start_date": "2020-02-21",
+    "type": "Street party",
+  },
+  Object {
     "end_date": "2020-02-28",
     "name": "Ice & snow sculpture festival",
     "start_date": "2019-12-24",
