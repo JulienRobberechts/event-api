@@ -12,8 +12,9 @@ Festival burning man (Nevada, United States)
 Let's say that we already have access to a external API named OpenEventApi (represented by this [file](./packages/server/tests/mock/events-all.json), this API does not exist for real). We want to build a wrapper API around this third-party API in order to control the access and add filtering and data transformation features.
 
 1. From the API, we want to be able to query a list of events
-  - filtered them by country, type and ongoing events.
-  - limited the content to a subset of fields: name, start_date, end_date, type, country.
+
+- filtered them by country, type and ongoing events.
+- limited the content to a subset of fields: name, start_date, end_date, type, country.
 
 2. To give access to experiences users to this API, we want to create a command-line interface.
 
@@ -49,15 +50,15 @@ There are 2 options
 
 - You can launch the command line locally
 
-```
-npm run cli
-```
+  ```
+  npm run cli
+  ```
 
-- OR you can install the package globally
+- OR you can install the package globally in order to use `event-cli` from any directory
 
-```
-npm i -g ./packages/event-cli
-```
+  ```
+  npm i -g ./packages/event-cli
+  ```
 
 ### Test the server
 
