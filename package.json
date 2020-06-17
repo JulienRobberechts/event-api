@@ -17,5 +17,8 @@
   "dependencies": {
     "concurrently": "^5.2.0",
     "yarn": "^1.22.4"
+  },
+  "resolutions": {
+    "**/yargs-parser": "^18.1.3"
   }
 }
