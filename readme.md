@@ -1,5 +1,7 @@
 # Top festivals in the world - Events API - demo project
 
+[![Node.js CI](https://github.com/JulienRobberechts/event-api/workflows/Node.js%20CI/badge.svg)](https://github.com/JulienRobberechts/event-api/actions?query=workflow%3A%22Node.js+CI%22)
+
 ## Purpose
 
 This is a demo project serving a selection of top festivals in the world.
