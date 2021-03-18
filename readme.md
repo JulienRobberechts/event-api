@@ -1,12 +1,13 @@
-# Top festivals in the world - Events API - demo project
 
 [![Node.js CI](https://github.com/JulienRobberechts/event-api/workflows/Node.js%20CI/badge.svg)](https://github.com/JulienRobberechts/event-api/actions?query=workflow%3A%22Node.js+CI%22)
+
+# Top festivals in the world - Events API - demo project
 
 ## Purpose
 
 This is a demo project serving a selection of top festivals in the world.
 
-![Festival burning man](./doc-resources/festival-burning-man.jpg)  
+![Festival burning man](./doc-resources/festival-burning-man.jpg)
 Festival burning man (Nevada, United States)
 
 ### Requirements
@@ -88,7 +89,7 @@ event-cli list -c spain
 
 The first one is a Question/Answer cli.
 
-![harbin international ice and snow festival](./doc-resources/harbin.jpg)  
+![harbin international ice and snow festival](./doc-resources/harbin.jpg)
 Harbin International Ice and Snow Sculpture Festival (Heilongjiang, China)
 
 ## Technical choices
