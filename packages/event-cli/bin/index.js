@@ -4,6 +4,7 @@ const program = require("commander");
 const qAndA = require("../lib/qa");
 const registerListCommand = require("../lib/list/command");
 
+program.version('1.0.1');
 console.log("Event Command line");
 
 registerListCommand(program);
